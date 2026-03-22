@@ -1,0 +1,134 @@
+from __future__ import annotations
+
+import logging
+import math
+import random
+import time
+import uuid
+from typing import Any, Dict, Optional
+
+logger = logging.getLogger("execution.order_router")
+
+# ── 주문 타입 결정 임계값 ─────────────────────────────────────
+_SPREAD_HOLD_BPS = 6.0      # [초기값] 스프레드 > 6bps → HOLD
+_DEPTH_HOLD_USD = 50_000   # [검증값] depth < $50K → HOLD
+_SPREAD_MARKET_BPS = 3.0      # [초기값] 스프레드 < 3bps → MARKET
+
+# ── Mock 슬리피지 시뮬레이션 ──────────────────────────────────
+_MOCK_SLIPPAGE_BPS = 0.5      # [초기값] paper_mode mock 슬리피지
+
+
+def _safe(val: Any, default: float = 0.0) -> float:
+    try:
+        v = float(val)
+        return v if math.isfinite(v) else default
+    except (TypeError, ValueError):
+        return default
+
+
+def _mock_order_response(
+    symbol: str,
+    side: str,
+    qty: float,
+    price: Optional[float],
+    order_type: str,
+) -> Dict[str, Any]:
+    """paper_mode 가상 체결 응답."""
+    filled = price if price else 0.0
+    slip = filled * _MOCK_SLIPPAGE_BPS / 10_000
+    if side == "Buy":
+        filled_price = filled + slip
+    else:
+        filled_price = max(filled - slip, 0.0)
+
+    return {
+        "order_id": str(uuid.uuid4())[:8],
+        "symbol": symbol,
+        "side": side,
+        "qty": qty,
+        "price": price,
+        "filled_price": round(filled_price, 8),
+        "order_type": order_type,
+        "status": "Filled",
+        "timestamp": time.time(),
+        "paper_mode": True,
+    }
+
+
+class OrderRouter:
+    """
+    주문 타입 결정 + 주문 실행.
+
+    decide_order_type() 로직 (구현지침서 명세):
+      spread_bps > 6.0  → "HOLD"
+      depth_usd  < 50K  → "HOLD"
+      spread_bps < 3.0  → "MARKET"
+      그 외             → "LIMIT"
+    """
+
+    def __init__(
+        self,
+        paper_mode: bool = True,
+        http_client: Any = None,
+    ) -> None:
+        self._paper_mode = paper_mode
+        self._http_client = http_client
+
+    def decide_order_type(
+        self,
+        symbol: str,
+        market_state: Dict[str, Any],
+    ) -> str:
+        """
+        반환: "MARKET" / "LIMIT" / "HOLD"
+        """
+        spread = _safe(market_state.get("spread_bps"), 0.0)
+        depth = _safe(market_state.get("orderbook_depth_usd"), _DEPTH_HOLD_USD)
+
+        if spread > _SPREAD_HOLD_BPS:    # [초기값]
+            return "HOLD"
+        if depth < _DEPTH_HOLD_USD:      # [검증값]
+            return "HOLD"
+        if spread < _SPREAD_MARKET_BPS:  # [초기값]
+            return "MARKET"
+        return "LIMIT"
+
+    def place_order(
+        self,
+        symbol: str,
+        side: str,
+        qty: float,
+        price: Optional[float],
+        order_type: str,
+        reduce_only: bool = False,
+    ) -> Dict[str, Any]:
+        """
+        주문 실행.
+        paper_mode=True → mock 체결 반환 (API 호출 없음).
+        """
+        try:
+            if self._paper_mode:
+                return _mock_order_response(symbol, side, qty, price, order_type)
+
+            params: Dict[str, Any] = {
+                "category": "linear",
+                "symbol": symbol,
+                "side": side,
+                "orderType": "Market" if order_type == "MARKET" else "Limit",
+                "qty": str(qty),
+                "timeInForce": "GTC" if order_type == "LIMIT" else "IOC",
+            }
+            if price:
+                params["price"] = str(price)
+            if reduce_only:
+                params["reduceOnly"] = True
+
+            response = self._http_client.place_order(**params)
+            return response
+
+        except Exception as exc:
+            logger.error(
+                "order_router place_order failed symbol=%s error=%s",
+                symbol, exc,
+            )
+            return {"status": "Error", "error": str(exc), "paper_mode": self._paper_mode}

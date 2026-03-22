@@ -1,0 +1,13 @@
+{
+  "equity": 850.0,
+  "daily_pnl": 0.0,
+  "daily_trade_count": 0,
+  "total_trade_count": 0,
+  "macro_state": "NEUTRAL",
+  "top3": [],
+  "open_positions": {},
+  "drawdown_state": "NORMAL",
+  "kill_switch_active": false,
+  "last_scan_time": 0.0,
+  "session_start_equity": 700.0
+}

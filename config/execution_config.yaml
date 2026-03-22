@@ -1,0 +1,14 @@
+order_type_default: "Limit"         # [초기값] Maker 우선
+time_in_force_maker: "PostOnly"     # [검증값]
+time_in_force_taker: "IOC"          # [초기값]
+post_only: true                     # [검증값]
+reduce_only_sl: true                # [검증값]
+reduce_only_tp: true                # [검증값]
+
+order_retry_max: 3                  # [검증값]
+order_retry_interval_seconds: 1     # [초기값]
+
+tp1_close_pct: 0.50                 # [초기값]
+tp2_close_pct: 0.50                 # [초기값]
+
+max_slippage_bps: 5                 # [검증값]

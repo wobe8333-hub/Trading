@@ -1,0 +1,71 @@
+stages:
+  - id: 1
+    equity_min: 700
+    equity_max: 1500
+    risk_pct_per_trade: 0.032       # [초기값]
+    daily_target_min: 30
+    daily_target_max: 60
+    daily_loss_limit: -35
+    breakeven_win_rate: 0.558       # [검증값]
+    expected_completion_days: 20
+    profit_locks:
+      - threshold: 20
+        scale_pct: 0.80
+        min_entry_score: 70
+      - threshold: 35
+        scale_pct: 0.60
+        min_entry_score: 75
+      - threshold: 50
+        scale_pct: 0.40
+        min_entry_score: 80
+        conservative_mode: true
+      - threshold: 60
+        halt: true
+
+  - id: 2
+    equity_min: 1500
+    equity_max: 3000
+    risk_pct_per_trade: 0.025       # [초기값]
+    daily_target_min: 50
+    daily_target_max: 90
+    daily_loss_limit: -60
+    breakeven_win_rate: 0.550
+    expected_completion_days: 23
+    profit_locks:
+      - threshold: 50
+        scale_pct: 0.80
+        min_entry_score: 70
+      - threshold: 90
+        halt: true
+
+  - id: 3
+    equity_min: 3000
+    equity_max: 6000
+    risk_pct_per_trade: 0.018       # [초기값]
+    daily_target_min: 80
+    daily_target_max: 140
+    daily_loss_limit: -100
+    breakeven_win_rate: 0.545
+    expected_completion_days: 32
+    profit_locks:
+      - threshold: 100
+        scale_pct: 0.70
+        min_entry_score: 70
+      - threshold: 140
+        halt: true
+
+  - id: 4
+    equity_min: 6000
+    equity_max: 10000
+    risk_pct_per_trade: 0.012       # [초기값]
+    daily_target_min: 120
+    daily_target_max: 220
+    daily_loss_limit: -150
+    breakeven_win_rate: 0.540
+    expected_completion_days: 32
+    profit_locks:
+      - threshold: 160
+        scale_pct: 0.70
+        min_entry_score: 72
+      - threshold: 220
+        halt: true
