@@ -9,7 +9,6 @@ from src.strategy.strategy_library.base_strategy import BaseStrategy
 from src.utils.math_utils import (
     compute_ema,
     compute_atr,
-    compute_vwap,
     count_pullback_candles,
 )
 
@@ -71,7 +70,16 @@ class VWAPPullback(BaseStrategy):
 
         ema20 = compute_ema(closes, 5)  # [초기값] EMA5  — 3분봉×5=15분 단기
         ema50 = compute_ema(closes, 20)  # [초기값] EMA20 — 3분봉×20=60분 중단기
-        vwap = compute_vwap(closes, volumes)
+        # Rolling VWAP (내부 전용, compute_vwap 전역 함수 미사용)  [초기값]
+        _vwap_lookback = 20  # [초기값] 최근 20봉 = 60분 기준
+        vwap = []
+        for _i in range(len(closes)):
+            _s = max(0, _i - _vwap_lookback + 1)
+            _rc_i = closes[_s:_i + 1]
+            _rv_i = volumes[_s:_i + 1]
+            _pv_i = sum(c * v for c, v in zip(_rc_i, _rv_i))
+            _cv_i = sum(_rv_i)
+            vwap.append(_pv_i / _cv_i if _cv_i > 0 else closes[_i])
         atrs = compute_atr(highs, lows, closes, 14)
 
         if not (ema20 and ema50 and vwap and atrs):

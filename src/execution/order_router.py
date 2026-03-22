@@ -12,7 +12,7 @@ logger = logging.getLogger("execution.order_router")
 # ── 주문 타입 결정 임계값 ─────────────────────────────────────
 _SPREAD_HOLD_BPS = 6.0      # [초기값] 스프레드 > 6bps → HOLD
 _DEPTH_HOLD_USD = 50_000   # [검증값] depth < $50K → HOLD
-_SPREAD_MARKET_BPS = 3.0      # [초기값] 스프레드 < 3bps → MARKET
+_SPREAD_MARKET_BPS = 0.1      # [초기값] 스프레드 < 0.1bps → MARKET (Maker 최우선)
 
 # ── Mock 슬리피지 시뮬레이션 ──────────────────────────────────
 _MOCK_SLIPPAGE_BPS = 0.5      # [초기값] paper_mode mock 슬리피지
@@ -62,7 +62,7 @@ class OrderRouter:
     decide_order_type() 로직 (구현지침서 명세):
       spread_bps > 6.0  → "HOLD"
       depth_usd  < 50K  → "HOLD"
-      spread_bps < 3.0  → "MARKET"
+      spread_bps < _SPREAD_MARKET_BPS  → "MARKET"
       그 외             → "LIMIT"
     """
 

@@ -16,7 +16,8 @@ def test_hold_on_low_depth():
 
 
 def test_market_on_tight_spread():
-    assert ROUTER.decide_order_type("BTCUSDT", _state(spread=1.0)) == "MARKET"
+    # MARKET 조건: spread < 0.1bps → spread=0.05 → MARKET
+    assert ROUTER.decide_order_type("BTCUSDT", _state(spread=0.05)) == "MARKET"
 
 
 def test_limit_on_mid_spread():
