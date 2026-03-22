@@ -1083,3 +1083,108 @@
   scores: [40.6078, 40.0954]
   types: ['CORE', 'RANGE_PLAY']
   full_ranking_count: 7
+[2026-03-22 13:59:03 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:11 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [37.5039, 26.8706]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 2
+[2026-03-22 13:59:18 UTC] scan elapsed=2.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [37.5988, 31.6971]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 2
+[2026-03-22 13:59:25 UTC] scan elapsed=2.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [27.8816, 31.0128]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 3
+[2026-03-22 13:59:25 UTC] scan elapsed=1.2ms macro=RISK_OFF
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=1.0ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=1.0ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=0.0ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=0.0ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=0.0ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=0.0ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=1.2ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=0.0ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=1.4ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:25 UTC] scan elapsed=0.0ms macro=NEUTRAL
+  TOP3: []
+  scores: []
+  types: []
+  full_ranking_count: 0
+[2026-03-22 13:59:32 UTC] scan elapsed=2.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [29.5648, 30.8377]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 3
+[2026-03-22 14:00:05 UTC] scan elapsed=4.6ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [28.3576, 31.0776]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 7
+[2026-03-22 14:00:30 UTC] scan elapsed=4.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [27.3756, 31.0795]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 6
+[2026-03-22 14:00:54 UTC] scan elapsed=4.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [26.2711, 30.9232]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 6
+[2026-03-22 14:01:19 UTC] scan elapsed=5.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [27.1895, 30.9291]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 7
+[2026-03-22 14:01:43 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [27.4048, 30.9577]
+  types: ['CORE', 'RANGE_PLAY']
+  full_ranking_count: 7

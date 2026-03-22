@@ -103,3 +103,4 @@ strategies:
       ema_fast: 5                   # [초기값]
       ema_slow: 20                  # [초기값]
       volume_ratio_min: 1.0         # [초기값]
+      vwap_lookback: 20             # [초기값] rolling VWAP 계산 기준 봉수
