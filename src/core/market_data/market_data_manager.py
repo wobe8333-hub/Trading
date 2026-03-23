@@ -12,9 +12,9 @@ from typing import Any, Deque, Dict, List, Optional
 logger = logging.getLogger("market_data.manager")
 
 # ── 갱신 주기 ──────────────────────────────────────────────
-_KLINES_1M_REFRESH_SEC = 60    # [초기값] 1분봉 — 60초마다
-_KLINES_3M_REFRESH_SEC = 180   # [초기값] 3분봉 — 180초마다
-_KLINES_5M_REFRESH_SEC = 300   # [초기값] 5분봉 — 300초마다
+_KLINES_1M_REFRESH_SEC = 300   # [초기값] 1분봉 — 300초마다 (Rate Limit 방지)
+_KLINES_3M_REFRESH_SEC = 300   # [초기값] 3분봉 — 300초마다
+_KLINES_5M_REFRESH_SEC = 600   # [초기값] 5분봉 — 600초마다
 _API_CALL_DELAY_SEC = 0.25     # [초기값] 심볼 간 호출 딜레이
 _TICKER_REFRESH_SEC = 5
 _OI_REFRESH_SEC = 30
