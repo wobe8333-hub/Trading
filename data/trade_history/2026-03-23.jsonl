@@ -112,3 +112,113 @@
 {"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:04:17.602175+00:00"}
 {"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:04:17.602175+00:00"}
 {"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:04:17.602175+00:00"}
+{"timestamp": "2026-03-23T14:20:36.468224+00:00", "symbol": "XAUTUSDT", "coin_type": "RANGE_PLAY", "strategy": "ema_cross_scalping", "regime": "TREND_UP", "macro_state": "BULL", "scanner_grade": "C", "direction": "LONG", "entry_score": 75.0, "position_scale": 0.4, "funding_rate": 5e-05, "order_type": "LIMIT", "fee_usd": 4.183252, "pnl_net": -4.183252, "r_multiple": 0.0, "sl_registered": true, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true, "direction": "LONG"}, "drawdown_state": "NORMAL", "entry_score_components": {"trend": 15.0, "vwap": 15.0, "regime": 15.0, "scanner": 0.0, "volume": 10.0, "volatility": 10.0, "orderflow": 0.0, "pattern": 10.0, "funding": 0.0}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "vwap_pullback", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"timestamp": "2024-01-01T00:00:00Z", "symbol": "BTCUSDT", "strategy": "trend_continuation", "regime": "TREND_UP", "pnl_net": 5.0, "r_multiple": 1.5, "strategy_layer_hit": {"layer1": true, "layer2": true, "layer3": true}}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.513675+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.513675+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.513675+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.514903+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.514903+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.514903+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.516235+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.516235+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.516235+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.516235+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.518249+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.519424+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.519424+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.519424+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.519424+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.522145+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.523145+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.523145+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.523145+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.523145+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.523145+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.524624+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.524624+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.524624+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.525638+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.525638+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.526637+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.526637+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.526637+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.526637+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.527961+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.527961+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.528961+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.528961+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.529962+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.532061+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.532061+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.533420+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.533420+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.533420+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.533420+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.534782+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.534782+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.534782+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.534782+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.536285+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.536285+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.537285+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.537285+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.537285+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.537285+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.538635+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.538635+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.538635+00:00"}
+{"pnl_net": 5.0, "r_multiple": 1.5, "order_type": "LIMIT", "sl_registered": true, "strategy": "vwap_pullback", "timestamp": "2026-03-23T14:21:14.538635+00:00"}
