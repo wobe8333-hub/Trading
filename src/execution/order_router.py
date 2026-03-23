@@ -79,19 +79,14 @@ class OrderRouter:
         symbol: str,
         market_state: Dict[str, Any],
     ) -> str:
-        """
-        반환: "MARKET" / "LIMIT" / "HOLD"
-        """
         spread = _safe(market_state.get("spread_bps"), 0.0)
         depth = _safe(market_state.get("orderbook_depth_usd"), _DEPTH_HOLD_USD)
 
-        if spread > _SPREAD_HOLD_BPS:    # [초기값]
+        if spread > _SPREAD_HOLD_BPS:    # [초기값] 6bps 초과 → HOLD
             return "HOLD"
-        if depth < _DEPTH_HOLD_USD:      # [검증값]
+        if depth < _DEPTH_HOLD_USD:      # [검증값] depth 부족 → HOLD
             return "HOLD"
-        if spread < _SPREAD_MARKET_BPS:  # [초기값]
-            return "MARKET"
-        return "LIMIT"
+        return "LIMIT"                   # [검증값] 항상 LIMIT (Maker 70%+ 원칙)
 
     def place_order(
         self,
