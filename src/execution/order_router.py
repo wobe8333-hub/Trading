@@ -59,11 +59,10 @@ class OrderRouter:
     """
     주문 타입 결정 + 주문 실행.
 
-    decide_order_type() 로직 (구현지침서 명세):
-      spread_bps > 6.0  → "HOLD"
-      depth_usd  < 50K  → "HOLD"
-      spread_bps < _SPREAD_MARKET_BPS  → "MARKET"
-      그 외             → "LIMIT"
+    decide_order_type() 로직:
+      spread_bps > 6.0  → "HOLD"  (비정상 시장)
+      depth_usd  < 50K  → "HOLD"  (유동성 부족)
+      그 외             → "LIMIT" (항상 Maker 주문, 70%+ 원칙)
     """
 
     def __init__(
