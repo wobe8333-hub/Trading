@@ -66,6 +66,13 @@ class ScannerRanker:
             })
 
         ranked.sort(key=lambda x: x["score"], reverse=True)
+        for idx, item in enumerate(ranked):
+            if idx == 0:
+                item["grade"] = "A"   # TOP1 → A (entry_score +10점)
+            elif idx == 1:
+                item["grade"] = "B"   # TOP2 → B (entry_score +5점)
+            else:
+                item["grade"] = "C"   # TOP3 이하 → C (entry_score +0점)
         logger.info(
             "ranker result count=%d top=%s",
             len(ranked),

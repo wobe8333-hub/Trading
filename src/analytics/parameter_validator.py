@@ -119,12 +119,20 @@ class ParameterValidator:
         param_name: str,
         value: float,
     ) -> List[Dict[str, Any]]:
-        """
-        파라미터 값 변경 시 거래 필터링 시뮬레이션.
-        현재 구현: 파라미터 관련 없는 거래만 통과 (보수적 접근).
-        """
-        _ = (param_name, value)
-        return [t for t in trades if t.get("pnl_net") is not None]
+        result = []
+        for t in trades:
+            if t.get("pnl_net") is None:
+                continue
+            score = float(t.get("entry_score", 0))
+            if param_name == "volume_ratio_min":
+                vol = float(t.get("entry_score_components", {}).get("volume", 0))
+                if vol >= value * 2:
+                    result.append(t)
+                else:
+                    continue
+            else:
+                result.append(t)
+        return result if result else trades
 
     def run_full_validation(
         self,

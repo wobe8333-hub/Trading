@@ -21,6 +21,24 @@ class AnalyticsEngine:
     def __init__(self) -> None:
         self._trades: List[Dict[str, Any]] = []
         os.makedirs(_TRADE_DIR, exist_ok=True)
+        self._load_from_disk()
+
+    def _load_from_disk(self) -> None:
+        import glob
+        try:
+            files = sorted(glob.glob(os.path.join(_TRADE_DIR, "*.jsonl")))
+            for fpath in files:
+                with open(fpath, "r", encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if line:
+                            try:
+                                self._trades.append(json.loads(line))
+                            except Exception:
+                                pass
+            logger.info("analytics_engine loaded %d trades from disk", len(self._trades))
+        except Exception as exc:
+            logger.error("analytics_engine load_from_disk failed error=%s", exc)
 
     def record_trade(self, trade: Dict[str, Any]) -> None:
         """24개 항목 거래 기록 저장."""

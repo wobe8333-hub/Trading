@@ -77,7 +77,13 @@ class ScoreComponents:
             ema5s = compute_ema(closes, 5)  # [초기값] 3분봉×5  = 15분
             ema20s = compute_ema(closes, 20)  # [초기값] 3분봉×20 = 60분
             ema50s = compute_ema(closes, 50)  # [초기값] 3분봉×50 = 150분
-            vwaps = compute_vwap(closes, volumes)
+            _lookback = 20
+            vwaps = []
+            for _i in range(len(closes)):
+                _s = max(0, _i - _lookback + 1)
+                _rc = closes[_s:_i+1]; _rv = volumes[_s:_i+1]
+                _pv = sum(c*v for c,v in zip(_rc,_rv)); _cv = sum(_rv)
+                vwaps.append(_pv/_cv if _cv > 0 else closes[_i])
 
             if not (ema5s and ema20s and ema50s):
                 return 0.0
@@ -150,7 +156,13 @@ class ScoreComponents:
             if not closes:
                 return 0.0
 
-            vwaps = compute_vwap(closes, volumes)
+            _lookback = 20
+            vwaps = []
+            for _i in range(len(closes)):
+                _s = max(0, _i - _lookback + 1)
+                _rc = closes[_s:_i+1]; _rv = volumes[_s:_i+1]
+                _pv = sum(c*v for c,v in zip(_rc,_rv)); _cv = sum(_rv)
+                vwaps.append(_pv/_cv if _cv > 0 else closes[_i])
             atrs = compute_atr(highs, lows, closes, 14)
 
             vwap = vwaps[-1] if vwaps else 0.0

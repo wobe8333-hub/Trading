@@ -179,6 +179,10 @@ class TradingLoop:
     def _execute_loop_result(self) -> Dict[str, Any]:
         """23단계 실행. 결과 dict 반환 (테스트 호환)."""
         now = datetime.now(timezone.utc)
+        if now.hour == 0 and now.minute == 0:
+            self._growth_engine.reset_daily()
+            self._risk_engine.reset_daily()
+            self._state_store.reset_daily()
         self._elapsed_days = (time.time() - self._start_time) / 86400
 
         try:
@@ -198,13 +202,17 @@ class TradingLoop:
                 "macro_state": _macro_now,
                 "session": session_result,
             }
-        effective_score_min = self._session_filter.get_effective_entry_score_min(now)
-
         # 3. Kill Switch 확인
         if self._risk_engine.kill_switch.is_blocked():
             _equity_now = self._state_store.get("equity", 700.0)
             _macro_now = self._state_store.get("macro_state", "NEUTRAL")
             return {"status": "KILL_SWITCH_ACTIVE", "equity": _equity_now, "macro_state": _macro_now}
+        else:
+            # kill_switch가 해제된 상태이면 streak 리셋
+            if not self._risk_engine.kill_switch.is_active:
+                self._risk_engine._streak.consecutive_losses = 0
+                self._risk_engine._streak.symbol_loss_count.clear()
+                self._risk_engine._streak.regime_loss_count.clear()
 
         # 4. 계좌 잔고 갱신
         equity = self._get_equity()
@@ -212,6 +220,10 @@ class TradingLoop:
         self._drawdown_mgr.update_equity(equity)
         daily_pnl = self._state_store.get("daily_pnl", 0.0)
         growth_params = self._growth_engine.get_trade_parameters(equity, daily_pnl)
+        effective_score_min = max(
+            self._session_filter.get_effective_entry_score_min(now),
+            growth_params.get("min_entry_score", 70),
+        )
 
         if growth_params["is_halted"]:
             return {
@@ -224,6 +236,7 @@ class TradingLoop:
         if time.time() - self._state_store.get("last_scan_time", 0.0) > _SCAN_INTERVAL:
             btc_state = self._mdm.get_state("BTCUSDT") or {}
             macro_state = self._macro_filter.get_state(btc_state)
+            self._coin_scanner.set_macro_state(macro_state)
             top3 = self._coin_scanner.scan(mdm=self._mdm)
             self._state_store.update("macro_state", macro_state)
             self._state_store.update("top3", top3)
@@ -276,11 +289,24 @@ class TradingLoop:
     ) -> Dict[str, Any]:
         """단계 6~23: 단일 코인 처리."""
         symbol = coin.get("symbol", "BTCUSDT")
+        open_pos = self._state_store.get("open_positions", {})
+        if symbol in open_pos:
+            return {"traded": False, "reason": "ALREADY_OPEN"}
         coin_type = coin.get("coin_type", "CORE")
         grade = coin.get("grade", "B")
 
         if self._risk_engine.kill_switch.is_symbol_blocked(symbol):
             return {"traded": False, "reason": "SYMBOL_BLOCKED"}
+        daily_pnl = self._state_store.get("daily_pnl", 0.0)
+        stage = self._growth_engine._stage_mgr.get_current_stage(
+            self._state_store.get("equity", _START_EQUITY)
+        )
+        market_state_for_risk = self._mdm.get_state(symbol) or {}
+        pre_ok, pre_reason = self._risk_engine.check_pre_trade(
+            symbol, "", daily_pnl, stage, market_state_for_risk
+        )
+        if not pre_ok:
+            return {"traded": False, "reason": pre_reason}
 
         market_state = self._mdm.get_state(symbol) or {}
 
@@ -545,7 +571,7 @@ class TradingLoop:
             exec_result = self._exec_engine.execute(
                 symbol,
                 direction,
-                score_result["position_scale"],
+                1.0,
                 pos_size,
                 entry_price,
                 stop_price,
@@ -578,7 +604,7 @@ class TradingLoop:
                 "funding_rate": funding_rate,
                 "order_type": exec_result.get("order_type", ""),
                 "fee_usd": exec_result.get("fee_usd", 0.0),
-                "pnl_net": exec_result.get("fee_usd", 0.0) * -1,
+                "pnl_net": 0.0,  # paper_mode: 미실현 손익 0 (fee는 별도 기록)
                 "r_multiple": 0.0,
                 "sl_registered": exec_result.get("sl_registered", True),
                 "strategy_layer_hit": layer_hit,
@@ -586,6 +612,9 @@ class TradingLoop:
                 "entry_score_components": score_result.get("components", {}),
             }
             self._analytics.record_trade(trade_record)
+            open_pos = self._state_store.get("open_positions", {})
+            open_pos[symbol] = {"direction": direction, "entry_price": entry_price}
+            self._state_store.update("open_positions", open_pos)
 
             # 23. 상태 업데이트
             pnl = trade_record.get("pnl_net", 0.0)

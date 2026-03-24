@@ -12,12 +12,7 @@ logger = logging.getLogger("execution.bracket_order_manager")
 
 
 def _round_qty(symbol: str, qty: float) -> float:
-    """SymbolMetadata를 통해 수량 반올림. 실패 시 소수 3자리 반올림."""
-    try:
-        meta = SymbolMetadata()
-        return meta.round_qty(symbol, qty)
-    except Exception:
-        return round(qty, 3)
+    return round(qty, 3)
 
 
 class BracketOrderManager:
@@ -119,17 +114,30 @@ class BracketOrderManager:
                 slTriggerBy="LastPrice",
                 reduceOnly=True,
             )
+        if self._paper_mode:
+            tp2_order = {
+                "order_id": str(uuid.uuid4())[:8],
+                "symbol": symbol,
+                "side": close_side,
+                "qty": tp2_qty,
+                "price": tp2_price,
+                "order_type": "LIMIT",
+                "status": "Registered",
+                "timestamp": time.time(),
+                "paper_mode": True,
+            }
+        else:
+            tp2_order = self._router.place_order(
+                symbol=symbol, side=close_side, qty=tp2_qty,
+                price=tp2_price, order_type="LIMIT", reduce_only=True,
+            )
 
         logger.info(
             "bracket_order_manager placed symbol=%s tp1_qty=%.3f tp2_qty=%.3f sl=%.2f tp1=%.2f",
             symbol, tp1_qty, tp2_qty, stop_price, tp1_price,
         )
 
-        return {
-            "tp1": tp1_order,
-            "sl": sl_order,
-            "tp2_pending": tp2_price,
-        }
+        return {"tp1": tp1_order, "sl": sl_order, "tp2": tp2_order}
 
     def verify_sl_registered(
         self,

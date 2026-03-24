@@ -120,10 +120,18 @@ class MacroCoinSelector:
                             target_type, macro_state,
                         )
                 else:
-                    logger.info(
-                        "macro_selector slot skipped type=%s macro=%s",
-                        target_type, macro_state,
-                    )
+                    # INDEPENDENT 없으면 RANGE_PLAY로 fallback
+                    fallback_min = min_scores.get("RANGE_PLAY", 25.0)
+                    fallback_cands = _filter_by_type(ranked_list, coin_types, "RANGE_PLAY", fallback_min)
+                    fallback_cands = [c for c in fallback_cands if c["symbol"] not in used_symbols]
+                    if fallback_cands:
+                        chosen = fallback_cands[0]
+                        entry = {**chosen, "coin_type": "RANGE_PLAY"}
+                        selected.append(entry)
+                        used_symbols.add(chosen["symbol"])
+                        logger.info("macro_selector slot fallback RANGE_PLAY symbol=%s", chosen["symbol"])
+                    else:
+                        logger.info("macro_selector slot skipped type=%s macro=%s", target_type, macro_state)
 
         logger.info(
             "macro_selector TOP%d macro=%s symbols=%s",
