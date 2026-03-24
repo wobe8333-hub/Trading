@@ -14,7 +14,11 @@ def test_step22_pass_criteria():
 
 
 def test_full_readiness_with_winning_history():
-    eng = AnalyticsEngine()
+    import tempfile, os
+    tmp_dir = tempfile.mkdtemp()
+    from unittest.mock import patch
+    with patch("src.analytics.analytics_engine._TRADE_DIR", tmp_dir):
+        eng = AnalyticsEngine()
     eng._persist = lambda trade: None  # 테스트 중 파일 쓰기 방지
     for _ in range(20):
         eng.record_trade(
