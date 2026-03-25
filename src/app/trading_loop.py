@@ -569,6 +569,7 @@ class TradingLoop:
                 atr,
                 regime,
                 _LEVERAGE,
+                entry_price,  # [FIX 16]
             )
             pos_size *= score_result["position_scale"]
             pos_size *= growth_params["scale_limit"]
@@ -629,7 +630,9 @@ class TradingLoop:
                 continue
 
             # 22. 거래 기록
+            _trade_id = uuid.uuid4().hex[:16]  # [FIX 6]
             trade_record = {
+                "trade_id": _trade_id,  # [FIX 6]
                 "timestamp": now.isoformat(),
                 "symbol": symbol,
                 "coin_type": coin_type,
@@ -652,20 +655,34 @@ class TradingLoop:
             }
             self._analytics.record_trade(trade_record)
             open_pos = self._state_store.get("open_positions", {})
-            open_pos[symbol] = {"direction": direction, "entry_price": entry_price}
+            open_pos[symbol] = {
+                "direction":   direction,
+                "entry_price": entry_price,
+                "stop_price":  stop_price,                        # [FIX 4]
+                "tp1_price":   tp1_price,                         # [FIX 4]
+                "qty":         pos_size,                          # [FIX 4]
+                "risk_usd":    equity * risk_pct,                 # [FIX 4]
+                "fee_usd":     exec_result.get("fee_usd", 0.0),  # [FIX 4]
+                "strategy":    strategy_name,                     # [FIX 4]
+                "regime":      regime,                            # [FIX 4]
+                "trade_id":    _trade_id,                         # [FIX 4]
+                "open_ts":     time.time(),                       # [FIX 4]
+            }
             self._state_store.update("open_positions", open_pos)
 
             # 23. 상태 업데이트
-            pnl = trade_record.get("pnl_net", 0.0)
+            # total_trade_count: 진입 시점 카운트 유지 [FIX 9]
             self._state_store.update(
-                "daily_pnl", self._state_store.get("daily_pnl", 0.0) + pnl
+                "total_trade_count",
+                self._state_store.get("total_trade_count", 0) + 1,
             )
-            self._state_store.update(
-                "total_trade_count", self._state_store.get("total_trade_count", 0) + 1
-            )
-            self._growth_engine.update_daily_pnl(pnl)
-            self._feedback.record(strategy_name, symbol, regime, pnl, 0.0)
-            self._risk_engine.check_post_trade(symbol, regime, pnl, 0.0)
+            # paper_mode: daily_pnl / growth_engine / feedback / check_post_trade
+            #             → _check_paper_positions() 청산 시점으로 이동 [FIX 9]
+            # live_mode:  청산 핸들러 미구현 — 진입 시점 placeholder
+            if not self._paper_mode:
+                self._growth_engine.update_daily_pnl(0.0)
+                self._feedback.record(strategy_name, symbol, regime, 0.0, 0.0)
+                self._risk_engine.check_post_trade(symbol, regime, 0.0, 0.0)
 
             return {
                 "traded": True,
@@ -675,6 +692,136 @@ class TradingLoop:
             }
 
         return {"traded": False, "reason": "NO_SIGNAL"}
+
+    def _check_paper_positions(self) -> None:
+        """
+        Paper mode 포지션 청산 시뮬레이션. [FIX 4,5,6,7,9]
+        MDM refresh_all() 이후 최신 가격 기준으로 SL/TP 판정.
+        청산 시: USD PnL 계산 → trade_record 업데이트
+                → equity 갱신 → 청산 시점 콜백 실행
+        """
+        if not self._paper_mode:
+            return
+        open_pos = self._state_store.get("open_positions", {})
+        if not open_pos:
+            return
+
+        to_close = []
+        for symbol, pos_info in list(open_pos.items()):
+            market_state = self._mdm.get_state(symbol)
+            if not market_state:
+                continue
+            current_price = float(market_state.get("last_price") or 0)
+            if current_price <= 0:
+                continue
+
+            direction   = pos_info.get("direction",   "LONG")
+            entry_price = float(pos_info.get("entry_price", current_price))
+            stop_price  = float(pos_info.get("stop_price",  0))
+            tp1_price   = float(pos_info.get("tp1_price",   0))
+            qty         = float(pos_info.get("qty",         0))
+            risk_usd    = float(pos_info.get("risk_usd",    1.0))
+            fee_entry   = float(pos_info.get("fee_usd",     0.0))
+            open_ts     = float(pos_info.get("open_ts",     time.time()))
+
+            if qty <= 0:
+                continue
+
+            close_reason = ""
+            exit_price   = 0.0
+
+            if direction == "LONG":
+                if stop_price > 0 and current_price <= stop_price:
+                    exit_price, close_reason = stop_price, "SL"
+                elif tp1_price > 0 and current_price >= tp1_price:
+                    exit_price, close_reason = tp1_price, "TP1"
+            else:  # SHORT
+                if stop_price > 0 and current_price >= stop_price:
+                    exit_price, close_reason = stop_price, "SL"
+                elif tp1_price > 0 and current_price <= tp1_price:
+                    exit_price, close_reason = tp1_price, "TP1"
+
+            # 150분 타임아웃 청산 [초기값]
+            if not close_reason and (time.time() - open_ts) > 9000:
+                exit_price, close_reason = current_price, "TIMEOUT"
+
+            if not close_reason:
+                continue
+
+            # FIX 5: USD PnL = qty × price_diff - fee_entry - fee_exit
+            if direction == "LONG":
+                gross_pnl = (exit_price - entry_price) * qty
+            else:
+                gross_pnl = (entry_price - exit_price) * qty
+
+            fee_exit   = qty * exit_price * _PAPER_MAKER_FEE_RATE  # [검증값]
+            pnl_net    = gross_pnl - fee_entry - fee_exit
+            r_multiple = pnl_net / risk_usd if risk_usd > 1e-9 else 0.0
+
+            to_close.append({
+                "symbol":     symbol,
+                "pnl_net":    pnl_net,
+                "r_multiple": r_multiple,
+                "reason":     close_reason,
+                "trade_id":   pos_info.get("trade_id", ""),
+                "strategy":   pos_info.get("strategy", ""),
+                "regime":     pos_info.get("regime",   ""),
+            })
+
+        if not to_close:
+            return
+
+        current_open = self._state_store.get("open_positions", {})
+        for item in to_close:
+            symbol     = item["symbol"]
+            pnl_net    = item["pnl_net"]
+            r_multiple = item["r_multiple"]
+            strategy   = item["strategy"]
+            regime     = item["regime"]
+            trade_id   = item["trade_id"]
+
+            # equity 갱신
+            equity     = self._state_store.get("equity", _START_EQUITY)
+            new_equity = equity + pnl_net
+            self._state_store.update("equity", new_equity)
+            self._state_store.update(
+                "daily_pnl",
+                self._state_store.get("daily_pnl", 0.0) + pnl_net,
+            )
+
+            # DrawdownManager 갱신
+            self._drawdown_mgr.update_equity(new_equity)
+
+            # FIX 7: peak_equity 영속화
+            self._state_store.update(
+                "peak_equity", self._drawdown_mgr.peak_equity
+            )
+            self._state_store.save_to_disk()
+
+            # FIX 6: trade_record pnl_net / r_multiple 업데이트
+            if trade_id:
+                self._analytics.update_trade_pnl(
+                    trade_id, pnl_net, r_multiple
+                )
+
+            # FIX 9: 청산 시점 콜백
+            self._growth_engine.update_daily_pnl(pnl_net)
+            self._feedback.record(
+                strategy, symbol, regime, pnl_net, r_multiple
+            )
+            self._risk_engine.check_post_trade(symbol, regime, pnl_net, 0.0)
+
+            # open_positions에서 제거
+            current_open.pop(symbol, None)
+
+            logger.info(
+                "paper_close symbol=%s reason=%s pnl=%.4f "
+                "r=%.4f new_equity=%.2f strategy=%s",
+                symbol, item["reason"], pnl_net,
+                r_multiple, new_equity, strategy,
+            )
+
+        self._state_store.update("open_positions", current_open)
 
     def _get_equity(self) -> float:
         """paper_mode → state_store 잔고 반환. 실거래 → API 호출."""
