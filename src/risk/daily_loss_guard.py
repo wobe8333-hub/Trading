@@ -28,6 +28,10 @@ class DailyLossGuard:
         """
         try:
             limit = float(stage.get("daily_loss_limit", -35))
+            logger.debug(
+                "daily_loss_guard check daily_pnl=%.4f limit=%.2f remaining=%.4f",
+                daily_pnl, limit, daily_pnl - limit,
+            )
             if daily_pnl <= limit:
                 self._ks.trigger("DAILY_LOSS_LIMIT", cooldown_hours=0.0)
                 reason = (

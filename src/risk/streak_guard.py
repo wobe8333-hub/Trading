@@ -32,8 +32,21 @@ class StreakGuard:
             self.consecutive_losses += 1
             self.symbol_loss_count[symbol] += 1
             self.regime_loss_count[regime] += 1
+            logger.info(
+                "streak_guard LOSS symbol=%s regime=%s pnl=%.4f "
+                "consecutive=%d trigger=%d remaining=%d "
+                "symbol_loss=%d regime_loss=%d",
+                symbol, regime, pnl_net,
+                self.consecutive_losses, _CONSEC_LOSS_TRIGGER,
+                max(0, _CONSEC_LOSS_TRIGGER - self.consecutive_losses),
+                self.symbol_loss_count[symbol],
+                self.regime_loss_count[regime],
+            )
         else:
-            # 이익 거래 → 연속 손실 리셋
+            logger.info(
+                "streak_guard WIN_RESET symbol=%s regime=%s pnl=%.4f prev_streak=%d",
+                symbol, regime, pnl_net, self.consecutive_losses,
+            )
             self.consecutive_losses = 0
         self.last_symbol = symbol
         self.last_regime = regime
@@ -43,6 +56,13 @@ class StreakGuard:
         반환: (True, "OK") / (False, reason)
         """
         try:
+            logger.debug(
+                "streak_guard check consecutive=%d trigger=%d "
+                "symbol=%s symbol_loss=%d regime=%s regime_loss=%d",
+                self.consecutive_losses, _CONSEC_LOSS_TRIGGER,
+                self.last_symbol, self.symbol_loss_count.get(self.last_symbol, 0),
+                self.last_regime, self.regime_loss_count.get(self.last_regime, 0),
+            )
             if self.consecutive_losses >= _CONSEC_LOSS_TRIGGER:  # [검증값]
                 self._ks.trigger("CONSECUTIVE_LOSSES", cooldown_hours=1.0)
                 return False, f"CONSECUTIVE_LOSSES: {self.consecutive_losses}"

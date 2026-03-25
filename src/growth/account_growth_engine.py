@@ -62,12 +62,14 @@ class AccountGrowthEngine:
             }
 
             logger.info(
-                "account_growth_engine equity=%.2f stage=%d risk=%.3f scale=%.2f halted=%s",
-                equity,
-                stage_id,
-                risk_pct,
-                lock["scale_limit"],
-                lock["halt"],
+                "account_growth_engine equity=%.2f stage=%d "
+                "risk=%.4f scale=%.2f halted=%s "
+                "daily_pnl=%.4f daily_limit=%.2f "
+                "min_score=%d conservative=%s",
+                equity, stage_id,
+                risk_pct, lock["scale_limit"], lock["halt"],
+                daily_pnl, daily_limit,
+                lock["min_entry_score"], lock["conservative_mode"],
             )
             return result
 

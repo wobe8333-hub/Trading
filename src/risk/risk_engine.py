@@ -74,6 +74,12 @@ class RiskEngine:
                 self.kill_switch.trigger("SPREAD_ANOMALY")
                 return False, f"SPREAD_ANOMALY: {spread:.1f}bps"
 
+            logger.info(
+                "risk_engine pre_trade_ok symbol=%s regime=%s "
+                "daily_pnl=%.4f spread_bps=%.2f",
+                symbol, regime, daily_pnl,
+                float(market_state.get("spread_bps", 0.0)),
+            )
             return True, "OK"
         except Exception as exc:
             logger.error("risk_engine check_pre_trade failed error=%s", exc)

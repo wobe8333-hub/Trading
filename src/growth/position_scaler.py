@@ -132,11 +132,15 @@ class PositionScaler:
             else:
                 position_size = risk_based_size
 
-            logger.debug(
-                "position_scaler regime=%s risk_usd=%.2f "
-                "stop_dist=%.6f risk_based=%.4f final=%.4f",
-                regime, risk_usd, stop_distance,
-                risk_based_size, position_size,
+            logger.info(
+                "position_scaler SIZE regime=%s "
+                "equity=%.2f risk_pct=%.5f risk_usd=%.2f "
+                "atr=%.5f stop_mult=%.3f stop_dist=%.6f "
+                "risk_based=%.4f final=%.4f entry=%.5f",
+                regime,
+                equity, risk_pct, risk_usd,
+                atr, stop_mult, stop_distance,
+                risk_based_size, position_size, entry_price,
             )
             return round(position_size, 4)
         except Exception as exc:
@@ -161,8 +165,15 @@ class PositionScaler:
         try:
             mult = self.get_stop_atr_multiplier(regime)
             if direction == "LONG":
-                return round(entry - atr * mult, 8)
-            return round(entry + atr * mult, 8)
+                _stop = round(entry - atr * mult, 8)
+            else:
+                _stop = round(entry + atr * mult, 8)
+            logger.info(
+                "position_scaler STOP regime=%s dir=%s "
+                "entry=%.5f atr=%.5f mult=%.3f stop=%.5f",
+                regime, direction, entry, atr, mult, _stop,
+            )
+            return _stop
         except Exception as exc:
             logger.error(
                 "position_scaler compute_stop_price failed error=%s", exc
@@ -187,14 +198,18 @@ class PositionScaler:
             tp1_mult = self._get_tp1_multiplier(regime)
             tp2_mult = self._get_tp2_multiplier(regime)
             if direction == "LONG":
-                return (
-                    round(entry + atr * tp1_mult, 8),
-                    round(entry + atr * tp2_mult, 8),
-                )
-            return (
-                round(entry - atr * tp1_mult, 8),
-                round(entry - atr * tp2_mult, 8),
+                _tp1 = round(entry + atr * tp1_mult, 8)
+                _tp2 = round(entry + atr * tp2_mult, 8)
+            else:
+                _tp1 = round(entry - atr * tp1_mult, 8)
+                _tp2 = round(entry - atr * tp2_mult, 8)
+            logger.info(
+                "position_scaler TP regime=%s dir=%s "
+                "entry=%.5f atr=%.5f tp1_mult=%.3f tp2_mult=%.3f "
+                "tp1=%.5f tp2=%.5f",
+                regime, direction, entry, atr, tp1_mult, tp2_mult, _tp1, _tp2,
             )
+            return _tp1, _tp2
         except Exception as exc:
             logger.error(
                 "position_scaler compute_tp_prices failed error=%s", exc

@@ -41,13 +41,19 @@ class DrawdownManager:
         if equity > self.peak_equity:
             self.peak_equity = equity
 
+        logger.debug(
+            "drawdown update equity=%.2f peak=%.2f dd_pct=%.4f state=%s",
+            self.current_equity, self.peak_equity,
+            self.get_drawdown_pct(), self.drawdown_state,
+        )
         new_state = self._compute_state()
         if new_state != self.drawdown_state:
             logger.info(
-                "drawdown_manager state_change %s→%s dd=%.2f%%",
-                self.drawdown_state,
-                new_state,
-                self.get_drawdown_pct() * 100,
+                "drawdown_manager state_change %s→%s "
+                "equity=%.2f peak=%.2f dd_pct=%.4f",
+                self.drawdown_state, new_state,
+                self.current_equity, self.peak_equity,
+                self.get_drawdown_pct(),
             )
             self.drawdown_state = new_state
             self.state_entry_time = _utcnow()

@@ -111,9 +111,13 @@ class LiquidityMonitor:
         ok = violation_count < _VIOLATION_THRESHOLD   # [초기값] 2개 미만
 
         reason = f"violations: {violation_count}" if not ok else "OK"
-        logger.debug(
-            "liquidity_monitor symbol=%s ok=%s violations=%d",
+        logger.info(
+            "liquidity_monitor symbol=%s ok=%s violations=%d "
+            "v1_bid_drop=%s v2_spread_spike=%s "
+            "spread_bps=%.4f spread_avg=%.4f bid_depth=%.2f prev_bid=%.2f",
             symbol, ok, violation_count,
+            v1, v2,
+            spread_bps, spread_avg, bid_depth, prev_bid,
         )
         return ok, reason
 

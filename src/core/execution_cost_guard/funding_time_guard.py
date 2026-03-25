@@ -68,6 +68,10 @@ class FundingTimeGuard:
             logger.info("funding_time_guard blocked reason=%s", reason)
             return False, reason
 
+        logger.debug(
+            "funding_time_guard ok minutes_to_next=%.1f buffer=%d",
+            minutes_to, _FUNDING_BUFFER_MIN,
+        )
         return True, "정상"
 
     @staticmethod

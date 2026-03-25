@@ -73,10 +73,10 @@ class ProfitLockManager:
                     if lock.get("halt", False):
                         self.is_halted = True
                         logger.info(
-                            "profit_lock HALT triggered stage=%d daily_pnl=%.2f threshold=%.2f",
-                            stage_id,
-                            daily_pnl,
-                            threshold,
+                            "profit_lock HALT triggered stage=%d "
+                            "daily_pnl=%.2f threshold=%.2f over=%.2f",
+                            stage_id, daily_pnl, threshold,
+                            daily_pnl - threshold,
                         )
                         return {
                             "halt": True,
@@ -91,11 +91,12 @@ class ProfitLockManager:
 
                     self.current_scale_limit = scale
                     logger.info(
-                        "profit_lock applied stage=%d daily_pnl=%.2f threshold=%.2f scale=%.2f",
-                        stage_id,
-                        daily_pnl,
-                        threshold,
-                        scale,
+                        "profit_lock applied stage=%d "
+                        "daily_pnl=%.2f threshold=%.2f over=%.2f "
+                        "scale=%.2f min_score=%d conservative=%s",
+                        stage_id, daily_pnl, threshold,
+                        daily_pnl - threshold,
+                        scale, min_sc, cons,
                     )
                     return {
                         "halt": False,

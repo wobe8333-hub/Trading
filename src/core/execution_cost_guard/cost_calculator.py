@@ -93,9 +93,11 @@ class CostCalculator:
             "maker_fee_bps":   _MAKER_FEE_RATE,   # [검증값] 참고용
             "taker_fee_bps":   _TAKER_FEE_RATE,   # [검증값] 참고용
         }
-        logger.debug(
-            "cost_calculator symbol=%s total=%.2fbps spread=%.2f slip=%.2f fee=%.2f",
+        logger.info(
+            "cost_calculator symbol=%s "
+            "total=%.4fbps spread=%.4f slip=%.4f fee=%.4f order_type=%s",
             symbol, total_cost_bps, spread_cost_bps, slippage_bps, fee_bps,
+            order_type,
         )
         return result
 

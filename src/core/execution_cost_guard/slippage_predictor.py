@@ -55,9 +55,10 @@ class SlippagePredictor:
 
             slippage = (order_size_usd / depth_1pct) * 100.0 * impact
             result   = min(slippage, _SLIPPAGE_CAP_BPS)
-            logger.debug(
-                "slippage_predictor regime=%s size=%.1f depth=%.1f slippage=%.2fbps",
-                regime, order_size_usd, depth_1pct, result,
+            logger.info(
+                "slippage_predictor regime=%s size=%.1f depth=%.1f "
+                "impact=%.2f slippage=%.4fbps",
+                regime, order_size_usd, depth_1pct, impact, result,
             )
             return round(result, 4)
         except Exception as exc:

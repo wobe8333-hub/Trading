@@ -81,9 +81,21 @@ class OrderRouter:
         depth = _safe(market_state.get("orderbook_depth_usd"), _DEPTH_HOLD_USD)
 
         if spread > _SPREAD_HOLD_BPS:    # [초기값] 6bps 초과 → HOLD
+            logger.info(
+                "order_router HOLD symbol=%s reason=SPREAD_HIGH spread_bps=%.4f max=%.1f",
+                symbol, spread, _SPREAD_HOLD_BPS,
+            )
             return "HOLD"
         if depth < _DEPTH_HOLD_USD:      # [검증값] depth 부족 → HOLD
+            logger.info(
+                "order_router HOLD symbol=%s reason=DEPTH_LOW depth_usd=%.0f min=%.0f",
+                symbol, depth, _DEPTH_HOLD_USD,
+            )
             return "HOLD"
+        logger.info(
+            "order_router LIMIT symbol=%s spread_bps=%.4f depth_usd=%.0f",
+            symbol, spread, depth,
+        )
         return "LIMIT"                   # [검증값] 항상 LIMIT (Maker 70%+ 원칙)
 
     def place_order(
