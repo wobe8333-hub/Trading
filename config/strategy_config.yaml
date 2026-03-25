@@ -102,5 +102,5 @@ strategies:
     params:
       ema_fast: 5                   # [초기값]
       ema_slow: 20                  # [초기값]
-      volume_ratio_min: 0.3         # [초기값] 실측 vol_ratio 0.24~0.77 기반 완화
+      volume_ratio_min: 0.5             # [수정7] 진입 품질 필터 강화
       vwap_lookback: 20             # [초기값] rolling VWAP 계산 기준 봉수

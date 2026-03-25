@@ -32,7 +32,7 @@ drawdown_alert_pct: 0.15            # [검증값]
 drawdown_danger_pct: 0.25           # [검증값]
 drawdown_halt_pct: 0.35             # [검증값]
 
-stop_atr_trend: 0.8                 # [초기값]
+stop_atr_trend: 1.2                 # [수정6] SL 거리 확대
 stop_atr_range: 0.6                 # [초기값]
 stop_atr_expansion: 0.9             # [초기값]
 tp1_atr_trend: 1.2                  # [초기값]

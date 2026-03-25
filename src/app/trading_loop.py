@@ -406,6 +406,21 @@ class TradingLoop:
                 continue
 
             direction = layer_hit.get("direction") or "LONG"
+
+            # [수정1] Regime-Direction 정합성 — 역추세 진입 차단
+            if regime == "TREND_UP" and direction == "SHORT":
+                logger.info(
+                    "process_coin BLOCKED_REGIME_DIR symbol=%s regime=%s direction=%s strategy=%s",
+                    symbol, regime, direction, strategy_name,
+                )
+                continue
+            if regime == "TREND_DOWN" and direction == "LONG":
+                logger.info(
+                    "process_coin BLOCKED_REGIME_DIR symbol=%s regime=%s direction=%s strategy=%s",
+                    symbol, regime, direction, strategy_name,
+                )
+                continue
+
             logger.info(
                 "process_coin SIGNAL_TRUE symbol=%s strategy=%s "
                 "direction=%s regime=%s macro=%s",

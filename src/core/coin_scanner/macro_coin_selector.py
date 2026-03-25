@@ -133,10 +133,20 @@ class MacroCoinSelector:
                     else:
                         logger.info("macro_selector slot skipped type=%s macro=%s", target_type, macro_state)
 
+        # [수정4] 선택 순서 기준 grade 재할당 — scanner bonus 정확화
+        for _idx, _item in enumerate(selected):
+            if _idx == 0:
+                _item["grade"] = "A"
+            elif _idx == 1:
+                _item["grade"] = "B"
+            else:
+                _item["grade"] = "C"
+
         logger.info(
-            "macro_selector TOP%d macro=%s symbols=%s",
+            "macro_selector TOP%d macro=%s symbols=%s grades=%s",
             len(selected),
             macro_state,
             [r["symbol"] for r in selected],
+            [r["grade"] for r in selected],
         )
         return selected

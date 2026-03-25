@@ -48,8 +48,16 @@ class RiskEngine:
         예외 발생 시 (True, "check_error") — 시스템 중단 없음.
         """
         try:
+            # [수정3] 자동 해제 시 streak 리셋 — CONSECUTIVE_LOSSES 재발동 무한루프 방지
+            _was_active = self.kill_switch.is_active
+            _prev_reason = self.kill_switch.reason if _was_active else ""
+
             if self.kill_switch.is_blocked():
                 return False, f"KILL_SWITCH_ACTIVE: {self.kill_switch.reason}"
+
+            if _was_active and not self.kill_switch.is_active and _prev_reason == "CONSECUTIVE_LOSSES":
+                self._streak.reset()
+                logger.info("risk_engine streak_reset reason=CONSECUTIVE_LOSSES_auto_released")
 
             if self.kill_switch.is_symbol_blocked(symbol):
                 return False, f"SYMBOL_BLOCKED: {symbol}"

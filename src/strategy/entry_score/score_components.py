@@ -334,11 +334,11 @@ class ScoreComponents:
         """
         score = 0.0
         if layer_hit.get("layer1"):
-            score += 3.3  # [검증값]
+            score = round(score + 3.3, 10)  # [수정2] 부동소수점 누적 오차 방지
         if layer_hit.get("layer2"):
-            score += 3.3  # [검증값]
+            score = round(score + 3.3, 10)
         if layer_hit.get("layer3"):
-            score += 3.4  # [검증값]
+            score = round(score + 3.4, 10)
         return round(_clip(score, 0.0, float(_MAX_PATTERN)), 4)
 
     # ── 9. Funding Bonus (0~8) ────────────────────────────────

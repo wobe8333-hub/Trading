@@ -8,7 +8,7 @@ from src.risk.kill_switch import KillSwitch
 
 logger = logging.getLogger("risk.streak_guard")
 
-_CONSEC_LOSS_TRIGGER = 3  # [검증값] 연속 손실 3회 → kill_switch
+_CONSEC_LOSS_TRIGGER = 5  # [수정5] 스캘핑 정상 SL 분포 반영 — 오발 차단 방지
 _SYMBOL_LOSS_TRIGGER = 2  # [검증값] 동일 symbol 2회 → symbol 차단 2시간
 _REGIME_LOSS_TRIGGER = 2  # [검증값] 동일 regime 2회 → regime 차단 1시간
 

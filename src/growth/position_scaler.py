@@ -73,7 +73,7 @@ class PositionScaler:
         EXPANSION     → stop_atr_expansion
         """
         cfg_key = _STOP_ATR_MAP.get(regime, "stop_atr_trend")
-        return self._get_cfg_val(cfg_key, 0.8)  # [초기값]
+        return self._get_cfg_val(cfg_key, 1.2)  # [수정6] SL 거리 확대 — 단기 노이즈 청산 방지
 
     def _get_tp1_multiplier(self, regime: str) -> float:
         cfg_key = _TP1_ATR_MAP.get(regime, "tp1_atr_trend")

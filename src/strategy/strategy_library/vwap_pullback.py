@@ -137,7 +137,8 @@ class VWAPPullback(BaseStrategy):
         null = self._null_hit()
 
         # ── 레이어 1 ──────────────────────────────────────────
-        ema_ok = ema20[-1] > ema50[-1] if d == "LONG" else ema20[-1] < ema50[-1]
+        # [수정9-NEW] 풀백 포착 정합: LONG=EMA5<EMA20(눌림), SHORT=EMA5>EMA20(반등)
+        ema_ok = ema20[-1] < ema50[-1] if d == "LONG" else ema20[-1] > ema50[-1]
         near_vwap = abs(closes[-1] - vwap[-1]) <= band
 
         pb_len = count_pullback_candles(closes, vwap, d)

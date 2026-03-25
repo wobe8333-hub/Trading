@@ -22,7 +22,7 @@ SCORE_TO_QUALITY: Dict[Tuple[int, int], str] = {
 
 def score_to_scale(total_score: float) -> float:
     """total_score → position_scale 변환."""
-    s = int(total_score)
+    s = int(round(total_score, 1))  # [수정8/10-NEW] 69.9999...→70.0 float 오차 완전 차단
     if s >= 90:
         return 1.0
     elif s >= 80:
@@ -34,7 +34,7 @@ def score_to_scale(total_score: float) -> float:
 
 def score_to_quality(total_score: float) -> str:
     """total_score → entry_quality 등급 변환."""
-    s = int(total_score)
+    s = int(round(total_score, 1))  # [수정8/10-NEW] 69.9999...→70.0 float 오차 완전 차단
     if s >= 90:
         return "A+"
     elif s >= 80:
