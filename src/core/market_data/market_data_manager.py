@@ -15,12 +15,13 @@ logger = logging.getLogger("market_data.manager")
 _KLINES_1M_REFRESH_SEC = 300   # [초기값] 1분봉 — 300초마다 (Rate Limit 방지)
 _KLINES_3M_REFRESH_SEC = 300   # [초기값] 3분봉 — 300초마다
 _KLINES_5M_REFRESH_SEC = 600   # [초기값] 5분봉 — 600초마다
+_KLINES_1H_REFRESH_SEC = 3600  # [초기값] 1시간봉 — 3600초마다 갱신
 _API_CALL_DELAY_SEC = 0.25     # [초기값] 심볼 간 호출 딜레이
 _TICKER_REFRESH_SEC = 5
 _OI_REFRESH_SEC = 30
 _KLINES_LIMIT = 200  # [검증값]
 
-_INTERVAL_MAP = {"1m": "1", "3m": "3", "5m": "5", "15m": "15"}
+_INTERVAL_MAP = {"1m": "1", "3m": "3", "5m": "5", "15m": "15", "1h": "60"}
 
 # paper/fallback용 최소 klines 길이(스캐너/테스트 안전장치)
 _FALLBACK_KLINES_N = 200
@@ -144,6 +145,7 @@ class MarketState:
     klines_3m: List[Dict[str, Any]] = field(default_factory=list)
     klines_1m: List[Dict[str, Any]] = field(default_factory=list)
     klines_5m: List[Dict[str, Any]] = field(default_factory=list)
+    klines_1h: List[Dict[str, Any]] = field(default_factory=list)  # [FIX 17]
 
     last_updated: float = 0.0
     latency_ms: float = 0.0
@@ -339,6 +341,10 @@ class MarketDataManager:
             self._fetch_klines_single(symbol, "5m")
             self._last_klines[symbol + "_5m"] = now
 
+        if force or now - self._last_klines.get(symbol + "_1h", 0) >= _KLINES_1H_REFRESH_SEC:
+            self._fetch_klines_single(symbol, "1h")
+            self._last_klines[symbol + "_1h"] = now
+
         if force or now - self._last_oi.get(symbol, 0.0) >= _OI_REFRESH_SEC:
             self._fetch_oi(symbol)
             self._last_oi[symbol] = now
@@ -397,14 +403,6 @@ class MarketDataManager:
                 s.turnover_24h = _safe(t.get("turnover24h"))
                 s.funding_rate = funding_rate
                 s.latency_ms = round(latency, 2)
-                # bid_ask_ratio: ticker bid/ask 수량이 없으므로 호가 스프레드 역수로 근사
-                # spread가 좁을수록 유동성 높음 → ratio를 spread 기반으로 산출
-                if best_bid > 0 and best_ask > 0 and best_ask > best_bid:
-                    # 스프레드 역수 기반 ratio (좁을수록 1.0 이상의 값, 시장 상태 반영)
-                    _spread_ratio = best_ask / best_bid   # [초기값] 1.0~1.0001 수준
-                    s.bid_ask_ratio = round(_spread_ratio, 6)
-                else:
-                    s.bid_ask_ratio = 1.0
                 s.ws_fresh = True
                 s.rest_fallback_used = False
 
@@ -569,6 +567,7 @@ class MarketDataManager:
                 s.klines_3m = _make_dummy_klines(s.last_price, step_ms=180000, n=_FALLBACK_KLINES_N)
                 s.klines_1m = _make_dummy_klines(s.last_price, step_ms=60000, n=_FALLBACK_KLINES_N)
                 s.klines_5m = _make_dummy_klines(s.last_price, step_ms=300000, n=_FALLBACK_KLINES_N)
+                s.klines_1h = _make_dummy_klines(s.last_price, step_ms=3600000, n=200)  # [FIX 17]
 
                 # 스캐너/entry-score 랭커에서 최소 점수(70점) 통과하도록 paper fallback 값 강화
                 s.volume_24h = 2_000_000_000.0
@@ -615,6 +614,7 @@ class MarketDataManager:
                 "klines_3m": s.klines_3m,
                 "klines_1m": s.klines_1m,
                 "klines_5m": s.klines_5m,
+                "klines_1h": s.klines_1h,  # [FIX 17]
                 "last_updated": s.last_updated,
                 "latency_ms": s.latency_ms,
                 "ws_fresh": s.ws_fresh,
