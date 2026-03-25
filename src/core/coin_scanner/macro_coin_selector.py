@@ -149,4 +149,10 @@ class MacroCoinSelector:
             [r["symbol"] for r in selected],
             [r["grade"] for r in selected],
         )
+        for _idx, _item in enumerate(selected):
+            logger.info(
+                "macro_selector SELECTED rank=%d symbol=%s grade=%s type=%s score=%.4f",
+                _idx, _item["symbol"], _item["grade"],
+                _item.get("coin_type", "?"), _item.get("score", 0.0),
+            )
         return selected

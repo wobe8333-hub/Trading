@@ -73,9 +73,17 @@ class ScannerRanker:
                 item["grade"] = "B"   # TOP2 → B (entry_score +5점)
             else:
                 item["grade"] = "C"   # TOP3 이하 → C (entry_score +0점)
-        logger.info(
-            "ranker result count=%d top=%s",
-            len(ranked),
-            [r["symbol"] for r in ranked[:3]],
-        )
+        logger.info("ranker result count=%d", len(ranked))
+        for _r in ranked[:5]:
+            logger.info(
+                "ranker coin symbol=%s score=%.4f grade=%s "
+                "liq=%.2f vol=%.2f mom=%.2f part=%.2f ob=%.2f fund=%.2f",
+                _r["symbol"], _r["score"], _r["grade"],
+                _r.get("features", {}).get("liquidity_score", 0.0),
+                _r.get("features", {}).get("volatility_score", 0.0),
+                _r.get("features", {}).get("momentum_score", 0.0),
+                _r.get("features", {}).get("participation_score", 0.0),
+                _r.get("features", {}).get("orderbook_quality", 0.0),
+                _r.get("features", {}).get("funding_imbalance_score", 0.0),
+            )
         return ranked

@@ -108,6 +108,9 @@ class MarketRegimeEngine:
 
     def __init__(self) -> None:
         self.regimes: Dict[str, str] = {}
+        self._last_regime_log: tuple[float, ...] = (
+            0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0,
+        )
 
     def get_regime(
         self, symbol: str, market_state: Dict[str, Any]
@@ -127,7 +130,17 @@ class MarketRegimeEngine:
             regime = "RANGE"
 
         self.regimes[symbol] = regime
-        logger.info("regime_engine symbol=%s regime=%s", symbol, regime)
+        ema20, ema50, atr_14, atr_expansion, volume_ratio, vwap, last_price = (
+            self._last_regime_log
+        )
+        logger.info(
+            "regime_engine symbol=%s regime=%s | "
+            "ema20=%.5f ema50=%.5f atr=%.5f atr_exp=%.4f "
+            "vol_ratio=%.3f vwap=%.5f price=%.5f",
+            symbol, regime,
+            ema20, ema50, atr_14, atr_expansion,
+            volume_ratio, vwap, last_price,
+        )
         return regime
 
     def get_all_regimes(self) -> Dict[str, str]:
@@ -139,6 +152,15 @@ class MarketRegimeEngine:
     ) -> str:
         klines: List[Dict[str, Any]] = market_state.get("klines_3m") or []
         if not klines:
+            self._last_regime_log = (
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                _safe(market_state.get("last_price")),
+            )
             return "RANGE"
 
         closes = [_safe(k.get("close")) for k in klines]
@@ -170,6 +192,16 @@ class MarketRegimeEngine:
 
         vwap = _compute_vwap(klines)
         last_price = _safe(market_state.get("last_price"))
+
+        self._last_regime_log = (
+            ema20,
+            ema50,
+            atr_14,
+            atr_expansion,
+            volume_ratio,
+            vwap,
+            last_price,
+        )
 
         exp_rules = REGIME_RULES["EXPANSION"]
         if (

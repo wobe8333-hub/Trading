@@ -47,32 +47,38 @@ class MacroMarketFilter:
     def _evaluate(self, btc_state: Dict[str, Any]) -> str:
         feat = self._feature_calc.compute(btc_state)
 
-        # 1. RISK_OFF 판정 (최우선)
         if (
             feat["atr_expansion"] > _RISK_OFF_ATR_EXPANSION
             and feat["volume_spike"] is True
             and feat["oi_change_pct"] < _RISK_OFF_OI_DROP
         ):
-            return "RISK_OFF"
-
-        # 2. BULL 판정
-        if (
+            state = "RISK_OFF"
+        elif (
             feat["ema_alignment"] == "BULL"
             and feat["price_vs_vwap"] == "ABOVE"
             and feat["oi_change_pct"] > 0
         ):
-            return "BULL"
-
-        # 3. BEAR 판정
-        if (
+            state = "BULL"
+        elif (
             feat["ema_alignment"] == "BEAR"
             and feat["price_vs_vwap"] == "BELOW"
             and feat["oi_change_pct"] < 0
         ):
-            return "BEAR"
+            state = "BEAR"
+        else:
+            state = "NEUTRAL"
 
-        # 4. NEUTRAL (기본)
-        return "NEUTRAL"
+        logger.debug(
+            "macro_evaluate result=%s ema_align=%s price_vs_vwap=%s "
+            "ema20=%.2f ema50=%.2f atr_exp=%.4f oi_chg=%.6f "
+            "funding=%.6f vol_spike=%s",
+            state,
+            feat.get("ema_alignment"), feat.get("price_vs_vwap"),
+            feat.get("ema20", 0.0), feat.get("ema50", 0.0),
+            feat.get("atr_expansion", 1.0), feat.get("oi_change_pct", 0.0),
+            feat.get("funding_bias", 0.0), feat.get("volume_spike", False),
+        )
+        return state
 
     def _log_state_change(self, new_state: str) -> None:
         """이전 상태와 달라진 경우 logs/app/ 에 기록."""

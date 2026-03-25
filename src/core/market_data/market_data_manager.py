@@ -291,12 +291,18 @@ class MarketDataManager:
             try:
                 self._fetch_all(symbol, force=True)
                 logger.info(
-                    "market_data_manager initialized symbol=%s price=%s klines_3m=%d oi=%s funding=%s",
+                    "market_data_manager initialized symbol=%s "
+                    "price=%s bid=%s ask=%s spread_bps=%s "
+                    "klines_3m=%d oi=%s funding=%s vol24h=%s",
                     symbol,
                     self._states[symbol].last_price,
+                    self._states[symbol].best_bid,
+                    self._states[symbol].best_ask,
+                    self._states[symbol].spread_bps,
                     len(self._states[symbol].klines_3m),
                     self._states[symbol].open_interest,
                     self._states[symbol].funding_rate,
+                    self._states[symbol].volume_24h,
                 )
             except Exception as exc:
                 logger.error("initialize symbol=%s error=%s", symbol, exc)

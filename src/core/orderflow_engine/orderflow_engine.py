@@ -69,12 +69,19 @@ class OrderflowEngine:
         }
 
         logger.info(
-            "orderflow_engine symbol=%s max_conf=%.2f liq=%s hunt=%s imb=%s",
-            symbol,
-            max_conf,
-            liq_result.get("event_type"),
-            stop_hunt_result.get("direction"),
-            imbalance_result.get("event_type"),
+            "orderflow_engine symbol=%s max_conf=%.2f "
+            "liq=%s liq_conf=%.3f hunt=%s hunt_conf=%.3f imb=%s imb_conf=%.3f | "
+            "oi_chg_1m=%.5f vol_spike=%.3f price_impulse=%.4f "
+            "trade_vel=%.0f absorption=%s",
+            symbol, max_conf,
+            liq_result.get("event_type"), float(liq_result.get("confidence", 0.0)),
+            stop_hunt_result.get("direction"), float(stop_hunt_result.get("confidence", 0.0)),
+            imbalance_result.get("event_type"), float(imbalance_result.get("confidence", 0.0)),
+            features.get("oi_change_1m_pct", 0.0),
+            features.get("volume_spike_ratio", 1.0),
+            features.get("price_impulse_atr", 0.0),
+            features.get("trade_velocity", 0.0),
+            features.get("absorption_signal", False),
         )
         return state
 

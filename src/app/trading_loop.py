@@ -774,13 +774,19 @@ class TradingLoop:
             r_multiple = pnl_net / risk_usd if risk_usd > 1e-9 else 0.0
 
             to_close.append({
-                "symbol":     symbol,
-                "pnl_net":    pnl_net,
-                "r_multiple": r_multiple,
-                "reason":     close_reason,
-                "trade_id":   pos_info.get("trade_id", ""),
-                "strategy":   pos_info.get("strategy", ""),
-                "regime":     pos_info.get("regime",   ""),
+                "symbol":      symbol,
+                "pnl_net":     pnl_net,
+                "r_multiple":  r_multiple,
+                "reason":      close_reason,
+                "trade_id":    pos_info.get("trade_id", ""),
+                "strategy":    pos_info.get("strategy", ""),
+                "regime":      pos_info.get("regime",   ""),
+                "direction":   direction,
+                "entry_price": entry_price,
+                "exit_price":  exit_price,
+                "stop_price":  stop_price,
+                "tp1_price":   tp1_price,
+                "open_ts":     open_ts,
             })
 
         if not to_close:
@@ -830,10 +836,16 @@ class TradingLoop:
             current_open.pop(symbol, None)
 
             logger.info(
-                "paper_close symbol=%s reason=%s pnl=%.4f "
-                "r=%.4f new_equity=%.2f strategy=%s",
-                symbol, item["reason"], pnl_net,
-                r_multiple, new_equity, strategy,
+                "paper_close symbol=%s dir=%s strategy=%s regime=%s reason=%s "
+                "entry=%.5f exit=%.5f pnl=%.4f r=%.4f "
+                "hold_seconds=%d stop_was=%.5f tp1_was=%.5f "
+                "new_equity=%.2f daily_pnl=%.4f",
+                symbol, item["direction"], strategy, regime, item["reason"],
+                item["entry_price"], item["exit_price"], pnl_net, r_multiple,
+                int(time.time() - item["open_ts"]),
+                item["stop_price"], item["tp1_price"],
+                new_equity,
+                self._state_store.get("daily_pnl", 0.0),
             )
 
         self._state_store.update("open_positions", current_open)
