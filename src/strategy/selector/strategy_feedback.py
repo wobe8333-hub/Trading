@@ -43,11 +43,15 @@ class StrategyFeedback:
         if len(self._history[strategy]) > _MAX_HISTORY:
             self._history[strategy] = self._history[strategy][-_MAX_HISTORY:]
 
-        logger.debug(
-            "strategy_feedback recorded strategy=%s pnl=%.4f r=%.2f",
-            strategy,
-            pnl_net,
-            r_multiple,
+        _hist = self._history[strategy]
+        _n_hist = len(_hist)
+        _exp = sum(h["pnl_net"] for h in _hist[-20:]) / min(_n_hist, 20) if _n_hist > 0 else 0.0
+        _wr = sum(1 for h in _hist[-10:] if h["pnl_net"] > 0) / min(_n_hist, 10) if _n_hist > 0 else 0.0
+        logger.info(
+            "strategy_feedback strategy=%s pnl=%.4f r=%.2f "
+            "total_trades=%d expectancy_20=%.4f win_rate_10=%.3f",
+            strategy, pnl_net, r_multiple,
+            _n_hist, _exp, _wr,
         )
 
     def get_recent_expectancy(self, strategy: str, n: int = 20) -> float:

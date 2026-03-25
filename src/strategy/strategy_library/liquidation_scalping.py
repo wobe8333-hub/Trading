@@ -80,18 +80,31 @@ class LiquidationScalping(BaseStrategy):
         )
         min_conf = float(self.params.get("liquidation_confidence_min", 0.75))  # [초기값]
         layer2 = liq_conf >= min_conf
+        logger.info(
+            "liq_scalp symbol=%s L2=%s liq_conf=%.3f min_conf=%.3f",
+            symbol, layer2, liq_conf, min_conf,
+        )
         if not layer2:
             return False, {"layer1": True, "layer2": False, "layer3": False, "direction": None}
 
         # ── 레이어 3: 반등 봉 고점 50% 회복 ──────────────────
         if len(klines) >= 2:
             prev_range = highs[-2] - lows[-2]
-            recovery_pct = float(self.params.get("recovery_pct_min", 0.50))  # [초기값]
+            recovery_pct = float(self.params.get("recovery_pct_min", 0.50))
             recovery_ok = (closes[-1] - lows[-1]) >= prev_range * recovery_pct
         else:
             recovery_ok = False
 
         layer3 = recovery_ok
+        logger.info(
+            "liq_scalp symbol=%s L3=%s "
+            "close=%.5f low=%.5f prev_range=%.5f recovery_pct=%.2f",
+            symbol, layer3,
+            closes[-1] if closes else 0.0,
+            lows[-1] if lows else 0.0,
+            prev_range if len(klines) >= 2 else 0.0,
+            float(self.params.get("recovery_pct_min", 0.50)),
+        )
         if layer3:
             return True, {"layer1": True, "layer2": True, "layer3": True, "direction": "LONG"}
 

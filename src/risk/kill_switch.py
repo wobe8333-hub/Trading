@@ -66,7 +66,10 @@ class KillSwitch:
 
         self._write_log(reason)
         logger.warning(
-            "kill_switch TRIGGERED reason=%s cooldown_hours=%.1f", reason, hours
+            "kill_switch TRIGGERED reason=%s cooldown_hours=%.1f unblock_at=%s",
+            reason, hours,
+            self.cooldown_until.strftime("%Y-%m-%d %H:%M:%S UTC")
+            if self.cooldown_until else "MANUAL_ONLY",
         )
 
     def is_blocked(self) -> bool:
@@ -85,10 +88,11 @@ class KillSwitch:
         if self.cooldown_until is None:
             return False  # 조건 감시 중
         if _utcnow() >= self.cooldown_until:
+            _prev_reason = self.reason
             self.is_active = False
             self.reason = ""
             self.cooldown_until = None
-            logger.info("kill_switch AUTO_RELEASED")
+            logger.info("kill_switch AUTO_RELEASED prev_reason=%s", _prev_reason)
             return True
         return False
 

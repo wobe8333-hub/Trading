@@ -102,5 +102,9 @@ class BreakoutMomentum(BaseStrategy):
 
         # ── 레이어 3: 즉시 진입 (Entry Score 90+ 대리: 조건 완화) ──
         layer3 = True
+        logger.info(
+            "breakout symbol=%s L3=%s close=%.5f resistance=%.5f vol_ratio=%.3f",
+            symbol, layer3, last_close, resistance, vol_ratio,
+        )
         return True, {"layer1": True, "layer2": True, "layer3": True, "direction": "LONG"}
 

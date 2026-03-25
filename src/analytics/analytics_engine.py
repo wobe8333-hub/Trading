@@ -128,6 +128,25 @@ class AnalyticsEngine:
                             "trade_id=%s pnl=%.4f r=%.4f",
                             trade_id, pnl_net, r_multiple,
                         )
+                        _all = self._trades
+                        _n = len(_all)
+                        if _n > 0:
+                            _wins = [t for t in _all if t.get("pnl_net", 0) > 0]
+                            _losses = [t for t in _all if t.get("pnl_net", 0) <= 0]
+                            _wr = len(_wins) / _n
+                            _tpnl = sum(t.get("pnl_net", 0) for t in _all)
+                            _aw = sum(t["pnl_net"] for t in _wins) / max(len(_wins), 1)
+                            _al = sum(t["pnl_net"] for t in _losses) / max(len(_losses), 1)
+                            _pf = abs(_aw * len(_wins)) / abs(_al * len(_losses)) if _losses else 0.0
+                            _exp = (_wr * _aw) + ((1 - _wr) * _al)
+                            logger.info(
+                                "analytics_summary trades=%d wins=%d losses=%d "
+                                "win_rate=%.3f total_pnl=%.4f "
+                                "avg_win=%.4f avg_loss=%.4f "
+                                "profit_factor=%.3f expectancy=%.4f",
+                                _n, len(_wins), len(_losses),
+                                _wr, _tpnl, _aw, _al, _pf, _exp,
+                            )
                         return
                 except Exception as exc:
                     logger.error(

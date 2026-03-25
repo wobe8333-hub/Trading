@@ -180,11 +180,12 @@ class RuleBasedSelector:
         result = [s["name"] for s in scored]
         logger.info(
             "rule_based_selector symbol=%s macro=%s regime=%s coin=%s result=%s",
-            symbol,
-            macro_state,
-            regime,
-            coin_type,
-            result,
+            symbol, macro_state, regime, coin_type, result,
         )
+        for _s in scored:
+            logger.debug(
+                "rule_based_selector weight strategy=%s weight=%.3f",
+                _s["name"], _s["weight"],
+            )
         return result
 

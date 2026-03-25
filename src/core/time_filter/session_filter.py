@@ -86,6 +86,11 @@ class SessionFilter:
             "reason": reason,
             "checked_ts_utc": utc_dt.isoformat(),
         }
+        logger.info(
+            "session_filter allowed=%s primary=%s active=%s ts=%s",
+            result["allowed"], result["primary_session"],
+            result["active_sessions"], result["checked_ts_utc"],
+        )
         return result
 
     def is_allowed(self, dt_utc: Optional[datetime] = None) -> bool:
@@ -101,8 +106,14 @@ class SessionFilter:
         """
         primary = self.get_primary_session(dt_utc)
         if primary == TradingSession.SEOUL.value:
-            return self._entry_score_high_risk_min()
-        return self._entry_score_min()
+            _score_min = self._entry_score_high_risk_min()
+        else:
+            _score_min = self._entry_score_min()
+        logger.debug(
+            "session_filter score_min session=%s score_min=%d",
+            primary, _score_min,
+        )
+        return _score_min
 
     def minutes_to_next_funding(self, dt_utc: Optional[datetime] = None) -> float:
         if dt_utc is None:

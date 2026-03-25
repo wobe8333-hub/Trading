@@ -201,10 +201,14 @@ class ExecutionEngine:
         }
 
         logger.info(
-            "execution_engine executed symbol=%s dir=%s qty=%.3f "
-            "filled=%.2f fee=%.4f sl=%s order_type=%s",
-            symbol, direction, qty, filled_price,
-            fee_usd, sl_registered, order_type,
+            "execution_engine executed symbol=%s dir=%s "
+            "qty=%.4f intended=%.5f filled=%.5f "
+            "slippage_bps=%.4f fee=%.6f "
+            "sl=%s order_type=%s order_id=%s",
+            symbol, direction,
+            qty, entry_price, filled_price,
+            abs(filled_price - entry_price) / entry_price * 10000 if entry_price > 0 else 0.0,
+            fee_usd, sl_registered, order_type, order_id,
         )
         return result
 

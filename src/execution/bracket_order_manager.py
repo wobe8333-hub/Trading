@@ -133,8 +133,9 @@ class BracketOrderManager:
             )
 
         logger.info(
-            "bracket_order_manager placed symbol=%s tp1_qty=%.3f tp2_qty=%.3f sl=%.2f tp1=%.2f",
-            symbol, tp1_qty, tp2_qty, stop_price, tp1_price,
+            "bracket_order_manager placed symbol=%s "
+            "tp1_qty=%.4f tp2_qty=%.4f sl=%.5f tp1=%.5f tp2=%.5f",
+            symbol, tp1_qty, tp2_qty, stop_price, tp1_price, tp2_price,
         )
 
         return {"tp1": tp1_order, "sl": sl_order, "tp2": tp2_order}

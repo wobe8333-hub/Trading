@@ -108,6 +108,10 @@ class StopHuntReversal(BaseStrategy):
 
         # ── 레이어 3: 지지선 위 회복 클로즈 ──────────────────
         layer3 = last_close > support
+        logger.info(
+            "stop_hunt symbol=%s L3=%s close=%.6f support=%.6f",
+            symbol, layer3, last_close, support,
+        )
         if layer3:
             return True, {"layer1": True, "layer2": True, "layer3": True, "direction": "LONG"}
 
