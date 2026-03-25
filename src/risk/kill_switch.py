@@ -18,7 +18,7 @@ _MANUAL_ONLY_REASONS = frozenset(
 
 # 발동 조건별 쿨다운 (시간 단위, -1=수동해제)
 _COOLDOWN_MAP: Dict[str, float] = {
-    "DAILY_LOSS_LIMIT": 0.0,  # [검증값] 다음날 자동
+    "DAILY_LOSS_LIMIT": 24.0,  # [검증값] 24시간 후 자동 해제 (다음날)
     "CONSECUTIVE_LOSSES": 1.0,  # [검증값] 1시간 쿨다운
     "STOP_NOT_REGISTERED": -1.0,  # [검증값] 수동 해제만
     "API_ERROR": -1.0,  # [검증값] 수동 해제만
@@ -98,6 +98,16 @@ class KillSwitch:
         self.reason = ""
         self.cooldown_until = None
         logger.info("kill_switch MANUAL_RELEASED")
+
+    def reset_daily_loss_limit(self) -> None:
+        """매일 00:00 UTC reset_daily() 호출 시 DAILY_LOSS_LIMIT 자동 해제. [FIX 15]"""
+        if self.is_active and self.reason == "DAILY_LOSS_LIMIT":
+            self.is_active = False
+            self.reason = ""
+            self.cooldown_until = None
+            logger.info(
+                "kill_switch DAILY_LOSS_LIMIT auto_released at daily_reset"
+            )
 
     def block_symbol(self, symbol: str, hours: float) -> None:
         self.blocked_symbols[symbol] = _utcnow() + timedelta(hours=hours)

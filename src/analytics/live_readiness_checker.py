@@ -25,6 +25,10 @@ class LiveReadinessChecker:
         kill_switch=None,
         latency_ms: float = 0.0,
     ) -> None:
+        # FIX 10: analytics_engine=None 이면 자동 생성 (디스크 데이터 자동 로드)
+        if analytics_engine is None:
+            from src.analytics.analytics_engine import AnalyticsEngine
+            analytics_engine = AnalyticsEngine()
         self._analytics = analytics_engine
         self._kill_switch = kill_switch
         self._latency_ms = latency_ms

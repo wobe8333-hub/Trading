@@ -79,3 +79,66 @@ class AnalyticsEngine:
     def get_cold_start_flag(self) -> bool:
         return self.get_total_trade_count() < _COLD_START_TRADES
 
+    def update_trade_pnl(
+        self,
+        trade_id: str,
+        pnl_net: float,
+        r_multiple: float,
+    ) -> None:
+        """
+        청산 시 trade_id 기준으로 pnl_net / r_multiple 업데이트.
+        in-memory + JSONL 파일 overwrite 방식. [FIX 12]
+        """
+        try:
+            import glob
+            # 1. in-memory 업데이트
+            for trade in self._trades:
+                if trade.get("trade_id") == trade_id:
+                    trade["pnl_net"] = pnl_net
+                    trade["r_multiple"] = r_multiple
+                    break
+
+            # 2. JSONL 파일 overwrite (trade_id 기준)
+            files = sorted(glob.glob(os.path.join(_TRADE_DIR, "*.jsonl")))
+            for fpath in files:
+                lines: List[str] = []
+                found = False
+                try:
+                    with open(fpath, "r", encoding="utf-8") as f:
+                        for line in f:
+                            line = line.strip()
+                            if not line:
+                                continue
+                            try:
+                                record = json.loads(line)
+                                if record.get("trade_id") == trade_id:
+                                    record["pnl_net"] = pnl_net
+                                    record["r_multiple"] = r_multiple
+                                    found = True
+                                lines.append(
+                                    json.dumps(record, ensure_ascii=False)
+                                )
+                            except Exception:
+                                lines.append(line)
+                    if found:
+                        with open(fpath, "w", encoding="utf-8") as f:
+                            f.write("\n".join(lines) + "\n")
+                        logger.info(
+                            "analytics_engine update_trade_pnl "
+                            "trade_id=%s pnl=%.4f r=%.4f",
+                            trade_id, pnl_net, r_multiple,
+                        )
+                        return
+                except Exception as exc:
+                    logger.error(
+                        "analytics_engine update_trade_pnl "
+                        "file_error fpath=%s error=%s",
+                        fpath, exc,
+                    )
+        except Exception as exc:
+            logger.error(
+                "analytics_engine update_trade_pnl failed "
+                "trade_id=%s error=%s",
+                trade_id, exc,
+            )
+

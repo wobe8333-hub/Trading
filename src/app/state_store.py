@@ -13,6 +13,7 @@ _STATE_FILE = os.path.join(_CACHE_DIR, "state.json")
 
 _DEFAULT_STATE: Dict[str, Any] = {
     "equity": 700.0,
+    "peak_equity": 700.0,  # [FIX 7] DrawdownManager peak_equity 영속화
     "daily_pnl": 0.0,
     "daily_trade_count": 0,
     "total_trade_count": 0,

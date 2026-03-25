@@ -91,33 +91,52 @@ class PositionScaler:
         risk_pct: float,
         atr: float,
         regime: str,
-        leverage: int = 20,  # [검증값]
+        leverage: int = 20,         # [검증값]
+        entry_price: float = 0.0,   # [FIX 16] max_capital_usage 캡 계산용
     ) -> float:
         """
-        구현지침서 명세:
-          stop_multiplier = get_stop_atr_multiplier(regime)
-          risk_usd        = equity * risk_pct
-          stop_distance   = atr * stop_multiplier
-          position_size   = risk_usd / (stop_distance / leverage)
+        FIX 11: position_size = risk_usd / stop_distance  (leverage 제거)
+        FIX 16: min(risk_based_size, max_capital_usage 캡) 적용
 
-        반환: 계약 수 (float)
+        stop_multiplier = get_stop_atr_multiplier(regime)
+        risk_usd        = equity * risk_pct
+        stop_distance   = atr * stop_multiplier
+        risk_based_size = risk_usd / stop_distance
+        max_size        = (equity * max_capital_usage * leverage) / entry_price
+        position_size   = min(risk_based_size, max_size)
         """
         try:
-            stop_mult = self.get_stop_atr_multiplier(regime)
-            risk_usd = equity * risk_pct
+            stop_mult     = self.get_stop_atr_multiplier(regime)
+            risk_usd      = equity * risk_pct
             stop_distance = atr * stop_mult
 
             if stop_distance < 1e-9:
-                logger.error("position_scaler stop_distance~0 regime=%s", regime)
+                logger.error(
+                    "position_scaler stop_distance~0 regime=%s atr=%s",
+                    regime, atr,
+                )
                 return 0.0
 
-            position_size = risk_usd / (stop_distance / leverage)
+            # FIX 11: leverage 제거
+            risk_based_size = risk_usd / stop_distance
+
+            # FIX 16: max_capital_usage 캡 적용
+            if entry_price > 1e-9:
+                max_capital_usage = float(
+                    self._cfg.get("max_capital_usage", 0.25)  # [검증값]
+                )
+                max_size_by_capital = (
+                    equity * max_capital_usage * leverage
+                ) / entry_price
+                position_size = min(risk_based_size, max_size_by_capital)
+            else:
+                position_size = risk_based_size
+
             logger.debug(
-                "position_scaler regime=%s risk_usd=%.2f stop_dist=%.4f size=%.4f",
-                regime,
-                risk_usd,
-                stop_distance,
-                position_size,
+                "position_scaler regime=%s risk_usd=%.2f "
+                "stop_dist=%.6f risk_based=%.4f final=%.4f",
+                regime, risk_usd, stop_distance,
+                risk_based_size, position_size,
             )
             return round(position_size, 4)
         except Exception as exc:

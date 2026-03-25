@@ -94,4 +94,5 @@ class RiskEngine:
 
     def reset_daily(self) -> None:
         self._streak.reset()
+        self.kill_switch.reset_daily_loss_limit()  # [FIX 15]
 
