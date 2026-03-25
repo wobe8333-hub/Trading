@@ -129,7 +129,20 @@ class ScoreComponents:
                         else _VWAP_ABOVE_BONUS
                     )
 
-            return _clip(base, 0.0, float(_MAX_TREND))
+            result_trend = _clip(base, 0.0, float(_MAX_TREND))
+            logger.debug(
+                "score_trend dir=%s ema5=%.5f ema20=%.5f ema50=%.5f "
+                "vwap=%.5f price=%.5f base_before_clip=%.2f result=%.4f",
+                direction,
+                ema5s[-1] if ema5s else 0.0,
+                ema20s[-1] if ema20s else 0.0,
+                ema50s[-1] if ema50s else 0.0,
+                vwaps[-1] if vwaps else 0.0,
+                closes[-1] if closes else 0.0,
+                base,
+                result_trend,
+            )
+            return result_trend
         except Exception as exc:
             logger.error("compute_trend_score failed error=%s", exc)
             return 0.0
@@ -186,7 +199,14 @@ class ScoreComponents:
             distance_ratio = abs(deviation) / (atr * _ATR_VWAP_NORM)  # [초기값]
             distance_score = _clip(distance_ratio * 7.0, 0.0, 7.0)  # [검증값]
 
-            return _clip(direction_score + distance_score, 0.0, float(_MAX_VWAP))
+            result_vwap = _clip(direction_score + distance_score, 0.0, float(_MAX_VWAP))
+            logger.debug(
+                "score_vwap dir=%s deviation=%.6f atr=%.5f "
+                "dir_score=%.1f dist_score=%.4f result=%.4f",
+                direction, deviation, atr,
+                direction_score, distance_score, result_vwap,
+            )
+            return result_vwap
         except Exception as exc:
             logger.error("compute_vwap_score failed error=%s", exc)
             return 0.0
@@ -209,10 +229,19 @@ class ScoreComponents:
             strat_cfg = cfg.get(strategy_name, {})
 
             if regime in strat_cfg.get("forbidden_regimes", []):
-                return 0.0
-            if regime in strat_cfg.get("allowed_regimes", []):
-                return float(_MAX_REGIME)  # [검증값] 15
-            return 0.0
+                _score_r = 0.0
+            elif regime in strat_cfg.get("allowed_regimes", []):
+                _score_r = float(_MAX_REGIME)
+            else:
+                _score_r = 0.0
+            logger.debug(
+                "score_regime strat=%s regime=%s allowed=%s forbidden=%s result=%.1f",
+                strategy_name, regime,
+                strat_cfg.get("allowed_regimes", []),
+                strat_cfg.get("forbidden_regimes", []),
+                _score_r,
+            )
+            return _score_r
         except Exception as exc:
             logger.error("compute_regime_alignment_score failed error=%s", exc)
             return 0.0
@@ -226,7 +255,9 @@ class ScoreComponents:
         S: 15 / A: 10 / B: 5 / 기타: 0
         """
         mapping = {"S": 15.0, "A": 10.0, "B": 5.0}  # [검증값]
-        return mapping.get(grade, 0.0)
+        _bonus = mapping.get(grade, 0.0)
+        logger.debug("score_scanner grade=%s bonus=%.1f", grade, _bonus)
+        return _bonus
 
     # ── 5. Volume Score (0~10) ───────────────────────────────
 
@@ -251,13 +282,19 @@ class ScoreComponents:
 
             ratio = volumes[-1] / avg20
 
-            if ratio >= _VOL_SPIKE_HIGH:  # [초기값] 1.5
-                return 10.0
-            elif ratio >= _VOL_SPIKE_MED:  # [초기값] 1.2
-                return 7.0
-            elif ratio >= _VOL_SPIKE_LOW:  # [초기값] 1.0
-                return 5.0
-            return 2.0
+            if ratio >= _VOL_SPIKE_HIGH:
+                _score_v = 10.0
+            elif ratio >= _VOL_SPIKE_MED:
+                _score_v = 7.0
+            elif ratio >= _VOL_SPIKE_LOW:
+                _score_v = 5.0
+            else:
+                _score_v = 2.0
+            logger.debug(
+                "score_volume vol_last=%.2f avg20=%.2f ratio=%.3f result=%.1f",
+                volumes[-1] if volumes else 0.0, avg20, ratio, _score_v,
+            )
+            return _score_v
         except Exception as exc:
             logger.error("compute_volume_score failed error=%s", exc)
             return 0.0
@@ -293,18 +330,20 @@ class ScoreComponents:
 
             expansion = atr_last / mean_atr20
 
-            if _ATR_EXP_OK_MIN <= expansion <= _ATR_EXP_OK_MAX:  # [초기값] 0.8~1.5
-                return 10.0
+            if _ATR_EXP_OK_MIN <= expansion <= _ATR_EXP_OK_MAX:
+                _score_vola = 10.0
             elif (
-                (
-                    _ATR_EXP_WARN_MIN <= expansion < _ATR_EXP_OK_MIN
-                )  # [초기값] 0.5~0.8
-                or (
-                    _ATR_EXP_OK_MAX < expansion <= _ATR_EXP_WARN_MAX
-                )  # [초기값] 1.5~2.0
+                (_ATR_EXP_WARN_MIN <= expansion < _ATR_EXP_OK_MIN)
+                or (_ATR_EXP_OK_MAX < expansion <= _ATR_EXP_WARN_MAX)
             ):
-                return 6.0
-            return 2.0
+                _score_vola = 6.0
+            else:
+                _score_vola = 2.0
+            logger.debug(
+                "score_volatility atr=%.5f mean_atr20=%.5f expansion=%.4f result=%.1f",
+                atr_last, mean_atr20, expansion, _score_vola,
+            )
+            return _score_vola
         except Exception as exc:
             logger.error("compute_volatility_score failed error=%s", exc)
             return 0.0
@@ -319,7 +358,12 @@ class ScoreComponents:
         """
         try:
             max_conf = _safe(orderflow_state.get("max_confidence"), 0.0)
-            return _clip(max_conf * 10.0, 0.0, float(_MAX_ORDERFLOW))  # [검증값]
+            _score_of = _clip(max_conf * 10.0, 0.0, float(_MAX_ORDERFLOW))
+            logger.debug(
+                "score_orderflow max_conf=%.4f result=%.4f",
+                max_conf, _score_of,
+            )
+            return _score_of
         except Exception as exc:
             logger.error("compute_orderflow_score failed error=%s", exc)
             return 0.0
@@ -334,12 +378,18 @@ class ScoreComponents:
         """
         score = 0.0
         if layer_hit.get("layer1"):
-            score = round(score + 3.3, 10)  # [수정2] 부동소수점 누적 오차 방지
+            score = round(score + 3.3, 10)
         if layer_hit.get("layer2"):
             score = round(score + 3.3, 10)
         if layer_hit.get("layer3"):
             score = round(score + 3.4, 10)
-        return round(_clip(score, 0.0, float(_MAX_PATTERN)), 4)
+        _score_pat = round(_clip(score, 0.0, float(_MAX_PATTERN)), 4)
+        logger.debug(
+            "score_pattern l1=%s l2=%s l3=%s result=%.4f",
+            layer_hit.get("layer1"), layer_hit.get("layer2"),
+            layer_hit.get("layer3"), _score_pat,
+        )
+        return _score_pat
 
     # ── 9. Funding Bonus (0~8) ────────────────────────────────
 
@@ -353,14 +403,24 @@ class ScoreComponents:
         """
         rate = _safe(funding_rate)
         if direction == "SHORT":
-            if rate >= _FUNDING_EXTREME:  # [초기값] 0.001
-                return 8.0
-            elif rate >= _FUNDING_MED:  # [초기값] 0.0005
-                return 4.0
+            if rate >= _FUNDING_EXTREME:
+                _bonus_f = 8.0
+            elif rate >= _FUNDING_MED:
+                _bonus_f = 4.0
+            else:
+                _bonus_f = 0.0
         elif direction == "LONG":
-            if rate <= -_FUNDING_MED:  # [초기값] -0.0005
-                return 8.0
-            elif rate <= -_FUNDING_MILD:  # [초기값] -0.0002
-                return 4.0
-        return 0.0
+            if rate <= -_FUNDING_MED:
+                _bonus_f = 8.0
+            elif rate <= -_FUNDING_MILD:
+                _bonus_f = 4.0
+            else:
+                _bonus_f = 0.0
+        else:
+            _bonus_f = 0.0
+        logger.debug(
+            "score_funding dir=%s rate=%.6f bonus=%.1f",
+            direction, rate, _bonus_f,
+        )
+        return _bonus_f
 
