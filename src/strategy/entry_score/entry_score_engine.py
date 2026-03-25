@@ -122,13 +122,24 @@ class EntryScoreEngine:
         }
 
         logger.info(
-            "entry_score symbol=%s strat=%s dir=%s total=%.1f quality=%s scale=%.1f",
-            symbol,
-            strategy_name,
-            direction,
-            total,
-            entry_quality,
-            position_scale,
+            "entry_score symbol=%s strat=%s dir=%s "
+            "total=%.4f quality=%s scale=%.1f | "
+            "trend=%.4f vwap=%.4f regime=%.4f scanner=%.4f "
+            "vol=%.4f vola=%.4f of=%.4f pattern=%.4f funding=%.4f "
+            "raw=%.4f funding_bonus=%.4f",
+            symbol, strategy_name, direction,
+            total, entry_quality, position_scale,
+            result["components"]["trend"],
+            result["components"]["vwap"],
+            result["components"]["regime"],
+            result["components"]["scanner"],
+            result["components"]["volume"],
+            result["components"]["volatility"],
+            result["components"]["orderflow"],
+            result["components"]["pattern"],
+            result["components"]["funding"],
+            result["rule_based_score"],
+            result["funding_bonus"],
         )
         return result
 

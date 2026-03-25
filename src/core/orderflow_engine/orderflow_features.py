@@ -101,6 +101,16 @@ class OrderflowFeatureCalculator:
             and price_impulse_atr > -0.3
         )
 
+        logger.info(
+            "orderflow_features symbol=%s "
+            "oi_chg_1m=%.6f oi_chg_5m=%.6f "
+            "vol_spike=%.4f price_impulse=%.4f "
+            "trade_vel=%.0f absorption=%s",
+            symbol,
+            oi_change_1m_pct, oi_change_5m_pct,
+            volume_spike_ratio, price_impulse_atr,
+            trade_velocity, absorption_signal,
+        )
         return {
             "oi_change_1m_pct":    round(oi_change_1m_pct, 6),
             "oi_change_5m_pct":    round(oi_change_5m_pct, 6),

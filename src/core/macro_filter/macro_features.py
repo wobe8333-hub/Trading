@@ -144,6 +144,16 @@ class MacroFeatureCalculator:
         else:
             ema_alignment = "NEUTRAL"
 
+        logger.info(
+            "macro_features ema20=%.2f ema50=%.2f ema200=%.2f "
+            "vwap=%.2f atr=%.5f atr_exp=%.4f "
+            "oi_chg=%.6f funding=%.6f vol_spike=%s "
+            "price_vs_vwap=%s ema_align=%s",
+            ema20, ema50, ema200,
+            vwap, atr_14, atr_expansion,
+            oi_change_pct, funding_bias, volume_spike,
+            price_vs_vwap, ema_alignment,
+        )
         return {
             "ema20":         round(ema20, 6),
             "ema50":         round(ema50, 6),

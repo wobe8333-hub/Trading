@@ -248,6 +248,22 @@ class ScannerFeatureCalculator:
             100.0,
         )
 
+        logger.info(
+            "scanner_features symbol=%s total=%.4f "
+            "liq=%.2f vol=%.2f mom=%.2f part=%.2f ob=%.2f fund=%.2f evt=%.2f | "
+            "vol24h=%.0f spread_bps=%.4f atr_exp=%.4f "
+            "ema20_slope=%.6f vwap_dev=%.6f oi_chg=%.6f",
+            symbol, min(
+                liquidity_score + volatility_score + momentum_score
+                + participation_score + orderbook_quality
+                + funding_imbalance_score + event_score, 100.0
+            ),
+            liquidity_score, volatility_score, momentum_score,
+            participation_score, orderbook_quality,
+            funding_imbalance_score, event_score,
+            volume_24h, spread_bps, atr_expansion,
+            ema20_slope, vwap_deviation, oi_change_5m_pct,
+        )
         return {
             "symbol":                  symbol,
             "liquidity_score":         round(liquidity_score, 4),
