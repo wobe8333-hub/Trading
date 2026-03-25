@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 import time
+import uuid
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
@@ -37,6 +38,7 @@ _KILL_SLEEP = 10  # [초기값] KillSwitch 대기
 _LEVERAGE = 20  # [검증값]
 _START_EQUITY = 700.0  # [검증값]
 _TARGET_EQUITY = 10000.0  # [검증값]
+_PAPER_MAKER_FEE_RATE = 0.0002  # [검증값] Paper mode 청산 수수료 Limit 0.02%
 
 
 def _get_atr_from_state(market_state: Dict[str, Any]) -> float:
@@ -126,6 +128,25 @@ class TradingLoop:
         self._analytics = AnalyticsEngine()
         self._target_tracker = TargetTracker()
 
+        # FIX 7: 디스크에서 이전 상태 복원 (equity, peak_equity)
+        self._state_store.load_from_disk()
+        _saved_equity = self._state_store.get("equity",      _START_EQUITY)
+        _saved_peak   = self._state_store.get("peak_equity", _START_EQUITY)
+        if _saved_peak > 0:
+            self._drawdown_mgr.peak_equity    = _saved_peak
+            self._drawdown_mgr.current_equity = _saved_equity
+        logger.info(
+            "trading_loop state_restored equity=%.2f peak_equity=%.2f",
+            _saved_equity, _saved_peak,
+        )
+
+        # FIX 2: analytics 거래 수를 state_store에 동기화 (cold_start 판정 정확화)
+        _loaded_count = self._analytics.get_total_trade_count()
+        self._state_store.update("total_trade_count", _loaded_count)
+        logger.info(
+            "trading_loop total_trade_count synced count=%d", _loaded_count
+        )
+
         from src.utils.config_loader import load_strategy_config
 
         from src.strategy.strategy_library.vwap_pullback import VWAPPullback
@@ -153,6 +174,7 @@ class TradingLoop:
 
         self._elapsed_days = 0.0
         self._start_time = time.time()
+        self._last_reset_date: str = ""  # [FIX 14] 일일 리셋 중복 방지
 
     def run(self) -> None:
         """메인 루프. 예외 발생 시 1초 대기 후 재시도."""
@@ -179,10 +201,17 @@ class TradingLoop:
     def _execute_loop_result(self) -> Dict[str, Any]:
         """23단계 실행. 결과 dict 반환 (테스트 호환)."""
         now = datetime.now(timezone.utc)
-        if now.hour == 0 and now.minute == 0:
+        _today_str = now.strftime("%Y-%m-%d")
+        if (
+            now.hour == 0
+            and now.minute == 0
+            and self._last_reset_date != _today_str
+        ):
             self._growth_engine.reset_daily()
             self._risk_engine.reset_daily()
             self._state_store.reset_daily()
+            self._last_reset_date = _today_str
+            logger.info("trading_loop daily_reset date=%s", _today_str)
         self._elapsed_days = (time.time() - self._start_time) / 86400
 
         try:
@@ -191,9 +220,12 @@ class TradingLoop:
         except Exception as exc:
             logger.error("step1 mdm refresh failed error=%s", exc)
 
+        # 1-B. Paper mode 포지션 청산 체크 (최신 가격 기준) [FIX 4]
+        self._check_paper_positions()
+
         # 2. Session Filter
         session_result = self._session_filter.check(now)
-        if not session_result.get("allowed", True):
+        if not session_result.get("allowed", False):  # [FIX 13]
             _equity_now = self._state_store.get("equity", 700.0)
             _macro_now = self._state_store.get("macro_state", "NEUTRAL")
             return {
@@ -207,12 +239,6 @@ class TradingLoop:
             _equity_now = self._state_store.get("equity", 700.0)
             _macro_now = self._state_store.get("macro_state", "NEUTRAL")
             return {"status": "KILL_SWITCH_ACTIVE", "equity": _equity_now, "macro_state": _macro_now}
-        else:
-            # kill_switch가 해제된 상태이면 streak 리셋
-            if not self._risk_engine.kill_switch.is_active:
-                self._risk_engine._streak.consecutive_losses = 0
-                self._risk_engine._streak.symbol_loss_count.clear()
-                self._risk_engine._streak.regime_loss_count.clear()
 
         # 4. 계좌 잔고 갱신
         equity = self._get_equity()
@@ -487,7 +513,20 @@ class TradingLoop:
             if order_type == "HOLD":
                 continue
             equity = self._state_store.get("equity", _START_EQUITY)
-            order_size_usd = equity * growth_params["risk_pct"] * _LEVERAGE
+            # FIX 18: preliminary position size 기반 actual_notional 계산
+            _prelim_size = self._position_scaler.compute_position_size(
+                equity,
+                growth_params["risk_pct"],
+                atr,
+                regime,
+                _LEVERAGE,
+                entry_price,
+            )
+            order_size_usd = (
+                _prelim_size * entry_price
+                if _prelim_size > 0
+                else equity * growth_params["risk_pct"] * _LEVERAGE
+            )
             cost_ok, cost_detail = self._cost_guard.check(
                 symbol,
                 order_type,
