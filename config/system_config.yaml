@@ -24,7 +24,7 @@ spread_expansion_threshold: 2.5     # [초기값]
 funding_time_buffer_min: 15         # [초기값]
 
 entry_score_min: 70                 # [초기값]
-entry_score_high_risk_min: 80       # [초기값]
+entry_score_high_risk_min: 75       # [수정] 75~79점 구간 1,075건 해제 / 70~74점은 유지
 entry_score_a: 80                   # [초기값]
 entry_score_a_plus: 90              # [초기값]
 
@@ -35,10 +35,10 @@ drawdown_halt_pct: 0.35             # [검증값]
 stop_atr_trend: 1.2                 # [수정6] SL 거리 확대
 stop_atr_range: 0.6                 # [초기값]
 stop_atr_expansion: 0.9             # [초기값]
-tp1_atr_trend: 1.2                  # [초기값]
+tp1_atr_trend: 2.0                  # [수정] stop=1.2와 동일 → RR=1.0 → 2.0으로 RR=1.667 확보
 tp1_atr_range: 1.0                  # [초기값]
 tp1_atr_expansion: 1.5              # [초기값]
-tp2_atr_trend: 2.0                  # [초기값]
+tp2_atr_trend: 2.8                  # [수정] tp1(2.0) × 1.4 = 2.8 (RANGE 비율 동일 적용)
 tp2_atr_range: 1.4                  # [초기값]
 tp2_atr_expansion: 2.2              # [초기값]
 
