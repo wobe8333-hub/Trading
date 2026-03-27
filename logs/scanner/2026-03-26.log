@@ -10228,3 +10228,2023 @@
   scores: [44.4317, 43.3637]
   types: ['CORE', 'INDEPENDENT']
   full_ranking_count: 11
+[2026-03-26 14:36:03 UTC] scan elapsed=8.8ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [31.6676, 46.1168]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:37:05 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.4161, 47.4177]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:38:07 UTC] scan elapsed=8.6ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [34.2101, 46.6118]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:39:09 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.4162, 47.4076]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:40:12 UTC] scan elapsed=7.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.4162, 44.2479]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:41:13 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.8645, 44.0792]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:42:16 UTC] scan elapsed=8.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.5918, 44.2167]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:43:19 UTC] scan elapsed=7.7ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [30.6106, 41.8229]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:44:22 UTC] scan elapsed=8.6ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.5917, 43.6244]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:45:25 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.3169, 41.9476]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:46:26 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.6187, 44.4298]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:47:29 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.6187, 40.4465]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:48:29 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [37.2178, 46.5617]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:49:32 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.6187, 42.4982]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:50:33 UTC] scan elapsed=11.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.0311, 42.5109]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:51:35 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.0722, 38.896]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 14:52:40 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.0721, 38.8016]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:53:41 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [37.2127, 37.9091]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:54:43 UTC] scan elapsed=8.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.0721, 38.4014]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:55:48 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.5267, 44.4701]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:56:50 UTC] scan elapsed=1.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [39.0238, 46.1009]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:57:51 UTC] scan elapsed=4.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [39.0238, 44.3069]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:58:53 UTC] scan elapsed=12.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.527, 43.3294]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 14:59:54 UTC] scan elapsed=5.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [39.0238, 44.3074]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:00:55 UTC] scan elapsed=5.8ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [39.0535, 37.0401]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:01:56 UTC] scan elapsed=13.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SIRENUSDT']
+  scores: [38.941, 37.7163]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:02:59 UTC] scan elapsed=2.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'HYPEUSDT']
+  scores: [38.9411, 37.9409]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:04:02 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [39.0535, 37.9407]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:05:03 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [39.0535, 36.471]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:06:05 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [39.4074, 44.8452]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:07:06 UTC] scan elapsed=7.6ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [39.4074, 44.5723]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:08:07 UTC] scan elapsed=10.6ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [39.4074, 41.9815]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:09:10 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [39.4073, 47.8927]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:10:13 UTC] scan elapsed=9.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [32.5331, 43.3516]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:11:13 UTC] scan elapsed=7.7ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.8317, 47.7853]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:12:17 UTC] scan elapsed=9.9ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [40.0706, 46.489]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 15:13:19 UTC] scan elapsed=9.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [40.0706, 44.7149]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:14:21 UTC] scan elapsed=6.9ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.8315, 45.086]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:15:22 UTC] scan elapsed=8.9ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'PIPPINUSDT']
+  scores: [40.0818, 44.0714, 50.3026]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:16:23 UTC] scan elapsed=7.5ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'DOGEUSDT']
+  scores: [45.105, 42.8135, 41.0937]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:17:23 UTC] scan elapsed=7.8ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'PIPPINUSDT']
+  scores: [45.105, 34.2304, 41.0637]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:18:25 UTC] scan elapsed=8.8ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'DOGEUSDT']
+  scores: [45.105, 43.924, 46.0737]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:19:28 UTC] scan elapsed=6.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'PIPPINUSDT']
+  scores: [45.105, 34.203, 45.2194]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:20:30 UTC] scan elapsed=8.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'DOGEUSDT']
+  scores: [44.8694, 34.3221, 44.3358]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:21:33 UTC] scan elapsed=10.2ms macro=BEAR
+  TOP3: ['ETHUSDT', 'SIRENUSDT', 'DOGEUSDT']
+  scores: [44.371, 34.2821, 46.896]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:22:35 UTC] scan elapsed=11.3ms macro=BEAR
+  TOP3: ['ETHUSDT', 'SIRENUSDT', 'PIPPINUSDT']
+  scores: [44.3709, 36.5958, 44.0821]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:23:38 UTC] scan elapsed=6.5ms macro=BEAR
+  TOP3: ['BTCUSDT', 'SIRENUSDT', 'RIVERUSDT']
+  scores: [44.1385, 42.857, 42.303]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:24:40 UTC] scan elapsed=6.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'SIRENUSDT', 'PIPPINUSDT']
+  scores: [44.371, 42.8569, 46.8171]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:25:42 UTC] scan elapsed=18.7ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [40.8806, 44.6859]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:26:44 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [43.0208, 46.8341]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:27:46 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [43.0208, 43.2023]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:28:50 UTC] scan elapsed=6.7ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [43.0208, 43.1576]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:29:53 UTC] scan elapsed=7.9ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [43.0208, 43.6386]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 15:30:57 UTC] scan elapsed=13.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [41.1957, 41.8309]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:32:01 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [41.4136, 42.1978]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:33:02 UTC] scan elapsed=11.6ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [40.447, 42.6654]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:50:17 UTC] scan elapsed=10.9ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.2519, 39.711]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:51:20 UTC] scan elapsed=7.8ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.973, 37.0795]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:52:23 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.4475, 37.915]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 15:53:26 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.9732, 39.0505]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 15:54:29 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'HYPEUSDT']
+  scores: [37.9732, 36.9895]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:55:31 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.7609, 39.6272]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 15:56:31 UTC] scan elapsed=9.7ms macro=BEAR
+  TOP3: ['ETHUSDT', 'SIRENUSDT', 'DOGEUSDT']
+  scores: [38.0803, 52.6588, 41.353]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 15:57:32 UTC] scan elapsed=8.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'SIRENUSDT', 'DOGEUSDT']
+  scores: [37.1398, 42.6535, 41.07]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 15:58:35 UTC] scan elapsed=7.5ms macro=BEAR
+  TOP3: ['ETHUSDT', 'SIRENUSDT', 'HYPEUSDT']
+  scores: [38.0803, 46.4754, 38.261]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 15:59:36 UTC] scan elapsed=12.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'SIRENUSDT', 'HYPEUSDT']
+  scores: [38.0804, 46.7361, 38.2607]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 16:00:37 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [36.4122, 42.5737]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:01:37 UTC] scan elapsed=13.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [36.4121, 39.4349]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 16:02:38 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [37.3055, 43.2388]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:03:41 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.3056, 38.832]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 16:12:00 UTC] scan elapsed=12.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'TAOUSDT']
+  scores: [37.5366, 38.1516]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:13:02 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'TAOUSDT']
+  scores: [38.0011, 38.1518]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 16:14:04 UTC] scan elapsed=9.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [36.6949, 39.2733]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:15:06 UTC] scan elapsed=10.6ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'TAOUSDT']
+  scores: [31.1023, 38.151]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:16:07 UTC] scan elapsed=12.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.6497, 39.3776]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:17:09 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'TAOUSDT']
+  scores: [38.3835, 40.141]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:18:10 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.3835, 41.0177]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:19:13 UTC] scan elapsed=6.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [38.3835, 44.016]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:20:14 UTC] scan elapsed=7.7ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [38.3835, 41.0618]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:21:17 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.6984, 42.1645]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:22:19 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [37.4054, 45.1265]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:23:23 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.1405, 41.513]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:24:24 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.1405, 40.9149]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:25:27 UTC] scan elapsed=7.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [37.3394, 46.002]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:26:30 UTC] scan elapsed=6.6ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [37.3394, 44.8635]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:27:30 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.1158, 44.216]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:28:33 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [30.9902, 44.2067]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:29:37 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.1158, 43.0812]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:30:40 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.3484, 46.6906]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:31:42 UTC] scan elapsed=6.9ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [37.1122, 46.7752]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:32:43 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.351, 45.9143]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:33:44 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [37.1121, 48.3183]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:34:47 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [38.351, 42.2307]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:35:50 UTC] scan elapsed=7.8ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.1688, 45.4003]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:36:50 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.3081, 45.4002]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:37:53 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.3081, 44.278]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:38:55 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.3081, 44.2775]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:39:57 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [37.5188, 45.5549]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:41:01 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.2979, 44.4195]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:42:04 UTC] scan elapsed=9.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.9367, 45.7305]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:43:05 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.9367, 45.8371]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:44:05 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [37.9367, 44.345]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:45:11 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [37.9367, 44.5204]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:46:16 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'TAOUSDT', 'RIVERUSDT']
+  scores: [38.0288, 37.9106, 45.2014]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:47:17 UTC] scan elapsed=8.2ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'XAUTUSDT']
+  scores: [37.6973, 42.5428, 43.2557]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:48:19 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'PIPPINUSDT', 'XAUTUSDT']
+  scores: [37.3848, 35.3809, 43.2558]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:49:22 UTC] scan elapsed=8.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'XAUTUSDT']
+  scores: [37.6973, 36.3807, 43.1453]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:50:25 UTC] scan elapsed=8.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'RIVERUSDT']
+  scores: [37.6973, 34.1026, 43.6266]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:51:29 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [37.6325, 43.3649]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:52:32 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [38.1678, 41.1174]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:53:36 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [38.1678, 42.6858]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:54:40 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [37.5036, 42.6857]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:55:43 UTC] scan elapsed=6.4ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'XAUTUSDT']
+  scores: [38.2323, 38.0827, 40.9517]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:56:48 UTC] scan elapsed=6.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.5052, 44.2126]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:57:50 UTC] scan elapsed=7.3ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'DOGEUSDT']
+  scores: [37.0414, 41.7964, 42.8209]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:58:54 UTC] scan elapsed=7.7ms macro=BEAR
+  TOP3: ['ETHUSDT', 'RIVERUSDT', 'PIPPINUSDT']
+  scores: [37.5052, 39.8908, 41.3728]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 16:59:58 UTC] scan elapsed=6.1ms macro=BEAR
+  TOP3: ['ETHUSDT', 'RIVERUSDT', 'TAOUSDT']
+  scores: [37.5053, 41.7989, 40.1272]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:01:01 UTC] scan elapsed=7.9ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [37.1361, 40.7844]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:02:08 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.377, 42.1835]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:03:09 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.6981, 38.2992]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:04:13 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.6981, 43.4561]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:05:15 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.6981, 40.9586]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:06:16 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.5724, 43.3385]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:07:20 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [31.8056, 43.4425]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:08:24 UTC] scan elapsed=6.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.2804, 39.3027]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:09:27 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'HYPEUSDT']
+  scores: [37.2805, 40.7895]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:10:30 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.5698, 45.0939]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:11:34 UTC] scan elapsed=6.8ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.1307, 41.3956]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:12:36 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.9647, 37.7818]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:13:38 UTC] scan elapsed=9.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [37.9647, 38.2102]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:14:41 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [37.9647, 38.2062]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:15:45 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.6438, 38.7301]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:16:48 UTC] scan elapsed=7.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [37.6438, 37.8257]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 17:17:49 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [37.042, 43.1601]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:18:52 UTC] scan elapsed=9.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [36.611, 39.8254]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:19:54 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [37.042, 40.0232]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:20:57 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [36.7831, 43.5216]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:22:04 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [36.4097, 35.0004]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:23:06 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [36.4097, 38.8773]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:24:08 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [36.4097, 39.3851]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:25:11 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [36.4097, 42.7543]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 17:26:14 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [36.3634, 39.3872]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:27:22 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [36.8631, 39.4303]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:28:25 UTC] scan elapsed=7.7ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [36.8631, 39.4338]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 17:29:25 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [36.8631, 38.0553]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:30:29 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [37.0166, 36.8298]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:31:30 UTC] scan elapsed=6.8ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [37.0166, 37.3985]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 17:32:32 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.8632, 37.5827]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 17:33:32 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [34.1321, 36.2081]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:34:35 UTC] scan elapsed=6.7ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [37.8315, 34.0402]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:35:37 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [38.5564, 38.5521]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:36:39 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [38.5563, 38.5581]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:37:41 UTC] scan elapsed=7.8ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.0792, 38.3291]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:38:45 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.0792, 33.6881]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:39:48 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.0792, 41.0964]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:40:51 UTC] scan elapsed=7.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [36.7136, 33.7928]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:41:54 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.6617, 35.7173]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 17:42:57 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [37.8246, 41.4807]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:44:00 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [37.8246, 41.4807]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:45:03 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.8246, 42.8009]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:46:07 UTC] scan elapsed=7.5ms macro=BEAR
+  TOP3: ['BTCUSDT', 'PIPPINUSDT', 'DOGEUSDT']
+  scores: [37.6625, 36.3409, 41.4424]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:47:08 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [38.004, 41.4418]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 17:48:09 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.004, 43.6806]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:49:09 UTC] scan elapsed=6.2ms macro=BEAR
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [38.004, 43.8382]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:50:13 UTC] scan elapsed=7.4ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.0039, 43.6283]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:51:14 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [38.083, 41.3995]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:52:15 UTC] scan elapsed=7.5ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'PIPPINUSDT']
+  scores: [43.5554, 46.5302, 48.0765]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 17:53:18 UTC] scan elapsed=6.5ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'PIPPINUSDT']
+  scores: [43.5555, 43.5131, 46.6881]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:54:21 UTC] scan elapsed=7.5ms macro=BEAR
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'PIPPINUSDT']
+  scores: [43.5554, 44.7074, 46.6842]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:55:23 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [43.7126, 41.8573]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:56:27 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [41.4765, 43.9937]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:57:32 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [47.0664, 49.1873]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:58:35 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [47.0665, 48.0391]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 17:59:38 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [47.0664, 49.8325]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:00:40 UTC] scan elapsed=8.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'DOGEUSDT']
+  scores: [47.9982, 44.1824, 49.6379]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:01:40 UTC] scan elapsed=8.7ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'DOGEUSDT']
+  scores: [47.9982, 44.1859, 48.9997]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:02:45 UTC] scan elapsed=8.3ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'DOGEUSDT']
+  scores: [47.5211, 45.9109, 49.5157]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:03:47 UTC] scan elapsed=7.1ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'DOGEUSDT']
+  scores: [47.521, 45.4056, 52.1214]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:04:51 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'DOGEUSDT']
+  scores: [47.5211, 45.935, 47.2743]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:05:53 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [44.2902, 49.1836]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:06:57 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [44.2902, 43.2645]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:08:01 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [44.666, 44.286]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:09:05 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [44.1222, 47.1679]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:10:05 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [44.666, 49.6506]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:11:08 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [41.5887, 44.1173]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:12:11 UTC] scan elapsed=8.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [44.1545, 48.458]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:13:14 UTC] scan elapsed=8.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [43.9463, 48.4626]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:14:17 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [43.9463, 44.8592]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:15:19 UTC] scan elapsed=7.9ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [43.7512, 46.9305]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:16:22 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [43.7088, 44.02]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:17:26 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [43.1987, 39.867]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:18:27 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [43.1987, 42.0741]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:19:30 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [43.1987, 45.4753]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:20:33 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [43.3081, 41.7691]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:21:36 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [43.308, 45.265]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:22:43 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [43.9902, 45.5517]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:23:45 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [43.7112, 42.4912]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:24:48 UTC] scan elapsed=7.9ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [43.9902, 44.3087]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:25:51 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [45.3202, 44.0031]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:26:54 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'HYPEUSDT']
+  scores: [45.3201, 42.9184]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:27:54 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [46.0699, 44.8068]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:28:55 UTC] scan elapsed=7.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [46.07, 42.6988]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:29:55 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [46.07, 41.0833]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:30:59 UTC] scan elapsed=7.6ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'HYPEUSDT']
+  scores: [45.2524, 43.6985]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:32:00 UTC] scan elapsed=8.9ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [45.2524, 43.3536]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:33:01 UTC] scan elapsed=6.7ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [43.8502, 43.4544]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:34:02 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [43.8502, 43.9592]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:35:05 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [43.8502, 42.1239]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:36:07 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [43.2644, 45.5428]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:37:10 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [42.1606, 48.3665]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:38:11 UTC] scan elapsed=8.7ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [38.9035, 43.1047]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:39:15 UTC] scan elapsed=8.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [41.5356, 42.9686]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:40:18 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'SOLUSDT']
+  scores: [41.5356, 43.1617]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:41:21 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [41.5603, 41.2599]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:42:24 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [38.7414, 42.7938]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:43:28 UTC] scan elapsed=8.9ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [39.4678, 40.2909]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:44:31 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [40.9104, 41.7455]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:45:34 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [40.8915, 42.8245]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:46:38 UTC] scan elapsed=8.9ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [40.8915, 40.3436]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:47:42 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [40.8915, 37.0656]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:48:43 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [40.6074, 41.2217]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:49:43 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [40.6074, 41.7247]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:50:46 UTC] scan elapsed=8.6ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [42.091, 41.3714]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:51:51 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [42.091, 41.3713]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:52:53 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'TAOUSDT']
+  scores: [36.914, 39.4443]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:53:55 UTC] scan elapsed=8.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [41.116, 42.2849]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:54:55 UTC] scan elapsed=7.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [36.914, 46.1974]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:55:57 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [36.6748, 39.8807]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:56:58 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [39.8511, 42.0312]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:58:05 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [36.9046, 44.5741]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 18:59:07 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'TAOUSDT']
+  scores: [36.6028, 44.5738]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:00:11 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [36.2142, 41.7998]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:01:11 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [36.6783, 38.0352]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:02:12 UTC] scan elapsed=6.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [36.7661, 37.743]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:03:16 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [35.9576, 41.7418]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:04:18 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [35.9576, 46.3993]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:05:20 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [35.9576, 51.1122]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:06:23 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [36.24, 51.4178]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:07:26 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [36.24, 42.6382]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:08:27 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.5323, 46.1367]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:09:29 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.5323, 44.4373]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:10:32 UTC] scan elapsed=8.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.9146, 52.0699]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:11:34 UTC] scan elapsed=7.6ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.9146, 53.2561]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:12:36 UTC] scan elapsed=6.8ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [37.9146, 44.6154]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:13:37 UTC] scan elapsed=7.2ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'XRPUSDT']
+  scores: [37.4653, 48.2858, 34.7165]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:14:40 UTC] scan elapsed=6.6ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'TAOUSDT']
+  scores: [37.4653, 46.2686, 40.5425]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:15:42 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [35.3409, 38.9473]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:16:45 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [37.1802, 37.2644]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:17:47 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [37.1803, 40.1483]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:18:48 UTC] scan elapsed=9.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.1226, 39.6954]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:19:49 UTC] scan elapsed=9.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [36.5146, 39.692]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:20:52 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.279, 39.6444]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:21:54 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'TAOUSDT']
+  scores: [37.279, 38.3488]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:22:57 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.2981, 40.7557]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:23:58 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [37.2981, 38.8787]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:25:01 UTC] scan elapsed=6.1ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.2981, 42.3838]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:26:04 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [37.1893, 38.7968]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:27:06 UTC] scan elapsed=6.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [37.1893, 38.7968]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:28:09 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'HYPEUSDT']
+  scores: [37.2102, 36.9337]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:29:10 UTC] scan elapsed=8.6ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.3238, 36.7784]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:30:12 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'HYPEUSDT']
+  scores: [37.3238, 37.1231]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:31:13 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.3645, 40.8289]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:32:20 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [37.3645, 39.5363]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:33:22 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.1963, 40.8441]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 19:34:25 UTC] scan elapsed=8.7ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.1963, 40.841]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:35:25 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'PIPPINUSDT', 'RIVERUSDT']
+  scores: [38.7794, 51.1679, 42.9521]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:36:28 UTC] scan elapsed=7.2ms macro=BEAR
+  TOP3: ['BTCUSDT', 'PIPPINUSDT', 'XAUTUSDT']
+  scores: [38.7794, 45.1984, 38.7865]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:37:29 UTC] scan elapsed=8.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'PIPPINUSDT', 'RIVERUSDT']
+  scores: [38.7794, 48.4276, 38.8612]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:38:29 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'PIPPINUSDT', 'XAUTUSDT']
+  scores: [39.3522, 47.8291, 37.3302]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:39:32 UTC] scan elapsed=6.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'PIPPINUSDT', 'XAUTUSDT']
+  scores: [38.3123, 46.0589, 34.6546]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:40:36 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.8873, 37.5502]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:41:39 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.8873, 35.2191]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:42:42 UTC] scan elapsed=7.7ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [38.8873, 38.4081]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:43:45 UTC] scan elapsed=9.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [39.116, 45.0646]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:44:48 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [39.116, 47.6702]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:45:51 UTC] scan elapsed=7.8ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [39.0797, 50.5058]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:46:51 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [39.0797, 48.4223]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:47:52 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [38.8784, 48.4255]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:48:55 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [39.315, 51.0311]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:49:58 UTC] scan elapsed=7.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [37.351, 44.569]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:51:01 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [39.3102, 47.0151]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:52:04 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [39.3102, 45.9749]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:53:05 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [38.0941, 37.9586]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:54:06 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [38.3048, 38.752]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:55:10 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [38.3048, 41.173]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:56:10 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [38.0766, 41.1698]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:57:12 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [38.0766, 38.2028]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:58:16 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XRPUSDT']
+  scores: [38.3625, 38.7353]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 19:59:19 UTC] scan elapsed=6.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.1076, 42.1796]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:00:21 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [31.4854, 41.5932]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:01:24 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [38.5013, 40.7173]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:02:29 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'RIVERUSDT']
+  scores: [38.5013, 41.5967]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:03:30 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [37.8747, 40.7169]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:04:33 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [36.2958, 40.6353]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:05:37 UTC] scan elapsed=7.7ms macro=BEAR
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [37.3431, 40.8223]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:06:39 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [37.3431, 40.9043]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:07:42 UTC] scan elapsed=7.6ms macro=BEAR
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [37.6553, 40.9043]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:08:47 UTC] scan elapsed=14.9ms macro=BEAR
+  TOP3: ['BTCUSDT', 'TAOUSDT', 'XAUTUSDT']
+  scores: [38.0438, 33.4563, 40.5154]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:09:50 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'TAOUSDT', 'XAUTUSDT']
+  scores: [38.0438, 33.4569, 40.5155]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:10:52 UTC] scan elapsed=7.0ms macro=BEAR
+  TOP3: ['BTCUSDT', 'TAOUSDT', 'RIVERUSDT']
+  scores: [38.0503, 33.4645, 40.5724]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:11:53 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [35.9052, 38.038]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:12:53 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [38.0505, 40.8478]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:13:56 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [41.1138, 53.9225]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:14:59 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [41.1137, 53.9211]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:16:01 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [41.718, 64.4565]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:17:05 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [36.4978, 64.4579]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:18:08 UTC] scan elapsed=7.7ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [41.7181, 64.456]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:19:11 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [39.6181, 59.0816]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:20:14 UTC] scan elapsed=7.0ms macro=BULL
+  TOP3: ['BTCUSDT', 'RIVERUSDT', 'DOGEUSDT']
+  scores: [41.4553, 29.6422, 59.0797]
+  types: ['CORE', 'HIGH_BETA', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:21:17 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [43.3765, 53.2486]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:22:22 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [43.3765, 53.2484]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:23:23 UTC] scan elapsed=7.0ms macro=BULL
+  TOP3: ['ETHUSDT', 'DOGEUSDT', 'TAOUSDT']
+  scores: [43.3766, 53.25, 43.7722]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:24:26 UTC] scan elapsed=6.5ms macro=BULL
+  TOP3: ['ETHUSDT', 'DOGEUSDT', 'TAOUSDT']
+  scores: [47.0621, 54.0086, 43.1503]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:25:28 UTC] scan elapsed=6.6ms macro=BULL
+  TOP3: ['ETHUSDT', 'DOGEUSDT', 'XRPUSDT']
+  scores: [44.9327, 61.0269, 45.8487]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:26:31 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [44.9325, 61.0242]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:27:34 UTC] scan elapsed=7.2ms macro=BULL
+  TOP3: ['ETHUSDT', 'DOGEUSDT', 'XRPUSDT']
+  scores: [38.5217, 61.0252, 45.8512]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:28:36 UTC] scan elapsed=6.6ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [36.9087, 61.0246]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:29:40 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [36.2776, 59.0469]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:30:44 UTC] scan elapsed=6.0ms macro=BULL
+  TOP3: ['BTCUSDT', 'DOGEUSDT', 'XAUTUSDT']
+  scores: [36.5724, 51.5829, 42.1661]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:31:47 UTC] scan elapsed=7.0ms macro=BULL
+  TOP3: ['BTCUSDT', 'DOGEUSDT', 'TAOUSDT']
+  scores: [36.5725, 51.5842, 41.5755]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:32:51 UTC] scan elapsed=8.3ms macro=BULL
+  TOP3: ['ETHUSDT', 'DOGEUSDT', 'XAUTUSDT']
+  scores: [33.8614, 51.5835, 42.1662]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:33:52 UTC] scan elapsed=7.0ms macro=BULL
+  TOP3: ['BTCUSDT', 'DOGEUSDT', 'XAUTUSDT']
+  scores: [38.4414, 50.7448, 40.1431]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:34:52 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [38.4413, 50.7433]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:35:55 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.94, 50.7426]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:36:57 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.94, 50.7429]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:38:00 UTC] scan elapsed=6.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [37.94, 50.7428]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:39:04 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.462, 49.2615]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:40:07 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.462, 49.2618]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:41:10 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.3072, 48.8637]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:42:13 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [34.1865, 48.8628]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:43:15 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.5494, 48.8635]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:44:16 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.7508, 45.0157]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 20:45:16 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.7508, 45.0148]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:46:19 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.8166, 44.912]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:47:21 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.8166, 44.912]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:48:22 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [35.7053, 44.9118]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:49:25 UTC] scan elapsed=6.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [32.0038, 43.9764]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 8
+[2026-03-26 20:50:28 UTC] scan elapsed=6.8ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [32.7432, 44.1264]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:51:32 UTC] scan elapsed=7.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [32.0528, 44.126]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:52:32 UTC] scan elapsed=7.1ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [32.7432, 44.1255]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 20:53:34 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [32.7432, 44.2505]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:54:36 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [26.0953, 40.0142]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:55:39 UTC] scan elapsed=7.9ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [32.5634, 40.8456]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:56:41 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [30.5773, 44.5132]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:57:44 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [32.5634, 40.2221]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 20:58:51 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [30.0484, 44.5196]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 20:59:55 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [30.0484, 45.5744]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:00:58 UTC] scan elapsed=9.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [29.4571, 43.5264]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:02:00 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'XAUTUSDT']
+  scores: [29.7066, 41.3227]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:03:01 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [29.7066, 41.4814]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:04:02 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [30.7114, 46.1959]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:05:05 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [32.3957, 40.2007]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:06:08 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [31.6952, 40.1545]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:07:10 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [32.5936, 46.7397]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:08:11 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [32.5936, 39.2038]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:09:13 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [31.3321, 46.7215]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:10:18 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'TAOUSDT']
+  scores: [31.3644, 38.9253]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:11:20 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [31.3644, 43.0302]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:12:23 UTC] scan elapsed=9.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [30.5063, 45.9132]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:13:26 UTC] scan elapsed=8.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'PIPPINUSDT']
+  scores: [30.5064, 44.0539]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:14:26 UTC] scan elapsed=6.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [27.4419, 44.4023]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:15:27 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [29.7, 44.4025]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:16:30 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [29.7, 45.2818]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:17:32 UTC] scan elapsed=6.5ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [29.7, 45.0427]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:18:33 UTC] scan elapsed=6.4ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [30.4853, 45.0429]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:19:37 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [30.4853, 44.8851]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 21:20:40 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [27.2779, 44.2984]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:21:43 UTC] scan elapsed=6.8ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [31.1439, 44.2976]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:22:48 UTC] scan elapsed=8.1ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [31.1439, 44.2974]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:23:51 UTC] scan elapsed=8.0ms macro=BULL
+  TOP3: ['BTCUSDT', 'DOGEUSDT', 'PIPPINUSDT']
+  scores: [28.3058, 44.3003, 43.6905]
+  types: ['CORE', 'INDEPENDENT', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:24:53 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [40.8015, 45.7233]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:25:57 UTC] scan elapsed=7.5ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.4985, 46.9216]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:26:59 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [40.739, 46.9217]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:28:02 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [40.739, 46.9212]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:29:10 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [30.0865, 46.3069]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 21:30:14 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [38.0672, 46.3068]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:31:16 UTC] scan elapsed=8.4ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.9932, 45.5348]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 21:32:18 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.9931, 45.5338]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:33:20 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [37.9931, 45.533]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:34:20 UTC] scan elapsed=8.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XAUTUSDT']
+  scores: [34.2765, 34.3445]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:35:25 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'HYPEUSDT']
+  scores: [34.4262, 36.062]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:36:27 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'HYPEUSDT']
+  scores: [34.4262, 36.1114]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:37:27 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [34.1313, 37.0291]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:38:30 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'RIVERUSDT']
+  scores: [34.4262, 37.0297]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:39:31 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [28.4154, 46.8141]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:40:33 UTC] scan elapsed=7.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [34.0227, 45.8557]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:41:34 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [33.076, 45.856]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:42:38 UTC] scan elapsed=6.3ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [34.0227, 45.8557]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:43:42 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [34.0227, 45.8546]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:44:46 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [31.4309, 45.4633]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:45:49 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [33.6912, 45.5851]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:46:52 UTC] scan elapsed=8.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [33.6912, 45.5847]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:47:56 UTC] scan elapsed=7.2ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [33.6912, 45.5848]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:48:56 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'XRPUSDT']
+  scores: [33.6912, 42.5432]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 11
+[2026-03-26 21:49:56 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [34.192, 44.114]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 21:51:00 UTC] scan elapsed=7.7ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'DOGEUSDT']
+  scores: [33.9879, 43.9734]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:52:02 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [33.9878, 44.079]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:53:04 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [33.9878, 44.0784]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 9
+[2026-03-26 21:54:07 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [33.9878, 44.0786]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:55:08 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['ETHUSDT', 'TAOUSDT']
+  scores: [28.6074, 45.1514]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:56:10 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['XRPUSDT']
+  scores: [41.5236]
+  types: ['INDEPENDENT']
+  full_ranking_count: 7
+[2026-03-26 21:57:14 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [31.2846, 41.9669]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:58:17 UTC] scan elapsed=6.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'DOGEUSDT']
+  scores: [32.1136, 44.1433]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10
+[2026-03-26 21:59:24 UTC] scan elapsed=7.0ms macro=NEUTRAL
+  TOP3: ['BTCUSDT', 'PIPPINUSDT']
+  scores: [30.7923, 42.4286]
+  types: ['CORE', 'INDEPENDENT']
+  full_ranking_count: 10

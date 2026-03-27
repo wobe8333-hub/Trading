@@ -17,7 +17,7 @@ stages:
         min_entry_score: 75
       - threshold: 50
         scale_pct: 0.40
-        min_entry_score: 80
+        min_entry_score: 75
         conservative_mode: true
       - threshold: 60
         halt: true

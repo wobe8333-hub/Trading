@@ -36,10 +36,10 @@ stop_atr_trend: 1.2                 # [수정6] SL 거리 확대
 stop_atr_range: 0.6                 # [초기값]
 stop_atr_expansion: 0.9             # [초기값]
 tp1_atr_trend: 2.0                  # [수정] stop=1.2와 동일 → RR=1.0 → 2.0으로 RR=1.667 확보
-tp1_atr_range: 1.0                  # [초기값]
+tp1_atr_range: 2.0                  # [수정] RANGE 레짐 cost_guard 통과
 tp1_atr_expansion: 1.5              # [초기값]
 tp2_atr_trend: 2.8                  # [수정] tp1(2.0) × 1.4 = 2.8 (RANGE 비율 동일 적용)
-tp2_atr_range: 1.4                  # [초기값]
+tp2_atr_range: 2.8                  # [수정] tp1(2.0) × 1.4 = 2.8 비율 유지
 tp2_atr_expansion: 2.2              # [초기값]
 
 scanner_top_n: 10          # [초기값] macro_selector에 전달할 심볼 수 확대
