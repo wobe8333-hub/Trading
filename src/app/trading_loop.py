@@ -147,6 +147,18 @@ class TradingLoop:
             "trading_loop total_trade_count synced count=%d", _loaded_count
         )
 
+        # [FIX] 재시작 시 당일 날짜 기준 daily_pnl 초기화
+        # state.json에 이전 실행의 daily_pnl이 남아있으면 HALT 재발동 방지
+        from datetime import datetime, timezone as _tz
+        _today_utc = datetime.now(_tz.utc).strftime("%Y-%m-%d")
+        if self._state_store.get("last_reset_date", "") != _today_utc:
+            self._state_store.update("daily_pnl", 0.0)
+            self._state_store.update("daily_trade_count", 0)
+            self._growth_engine.reset_daily()
+            self._risk_engine.reset_daily()
+            self._state_store.update("last_reset_date", _today_utc)
+            logger.info("trading_loop startup_daily_reset date=%s", _today_utc)
+
         from src.utils.config_loader import load_strategy_config
 
         from src.strategy.strategy_library.vwap_pullback import VWAPPullback
