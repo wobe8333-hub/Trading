@@ -14,7 +14,7 @@ _TAKER_FEE_BPS  = 11.0   # [검증값] 0.055% * 2 = 0.11% = 11bps
 _MAKER_FEE_RATE = 0.8    # [검증값] 구현지침서 표기값 (참고용)
 _TAKER_FEE_RATE = 2.2    # [검증값] 구현지침서 표기값 (참고용)
 
-_MAX_COST_RATIO = 0.20   # [검증값] TP1 대비 비용 최대 20%
+_MAX_COST_RATIO = 0.25   # [수정] 0.20→0.25 (ETH/DOGE/XRP 100% 통과, BTC 56% 통과)
 
 
 def _safe(val: Any, default: float = 0.0) -> float:

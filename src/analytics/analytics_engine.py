@@ -8,7 +8,7 @@ from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger("analytics.engine")
 
-_COLD_START_TRADES = 50  # [검증값]
+_COLD_START_TRADES = 30  # [수정] 50→30 (cold_start 달성 시간 40% 단축)
 _TRADE_DIR = "data/trade_history"
 
 

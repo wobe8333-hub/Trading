@@ -44,7 +44,7 @@ tp2_atr_expansion: 2.2              # [초기값]
 
 scanner_top_n: 10          # [초기값] macro_selector에 전달할 심볼 수 확대
 scanner_interval_seconds: 60
-scan_symbols: ""                       # 빈 문자열 = 동적 스캔 모드 (초기값)
+scan_symbols: "BTCUSDT,ETHUSDT,SOLUSDT,XRPUSDT,TAOUSDT,DOGEUSDT,XAUTUSDT,RIVERUSDT,HYPEUSDT,SIRENUSDT"  # [수정] 검증된 10개 고정 심볼
 scan_top_n_by_volume: 20               # [초기값] 거래량 상위 N개 자동 선정
 scan_min_volume_usd: 100000000         # [초기값] 최소 24h 거래량 $1억 이상
 scan_symbol_fallback: "BTCUSDT,ETHUSDT,SOLUSDT"  # API 실패 시 fallback
