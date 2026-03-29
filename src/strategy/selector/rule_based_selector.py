@@ -12,7 +12,7 @@ from src.utils.config_loader import load_strategy_config
 
 logger = logging.getLogger("selector.rule_based")
 
-_COLD_START_TRADES = 50  # [검증값]
+_COLD_START_TRADES = 30  # [수정] 50→30 (analytics_engine.py 동기화)
 _COLD_START_STRATEGIES = [
     "vwap_pullback",
     "trend_continuation",
