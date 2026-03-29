@@ -108,7 +108,7 @@ class TradingLoop:
             "trading_loop MDM initialized symbols=%s",
             _scan_symbols,
         )
-        self._session_filter = SessionFilter()
+        self._session_filter = SessionFilter(cfg_obj.get_config())
         self._macro_filter = MacroMarketFilter()
         self._coin_scanner = AICoinScanner()
         self._regime_engine = MarketRegimeEngine()
